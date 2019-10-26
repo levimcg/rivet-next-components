@@ -1,0 +1,6 @@
+{
+  "extends": "stylelint-config-rivet",
+  "rules": {
+    "color-hex-length": "long"
+  }
+}

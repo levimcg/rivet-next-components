@@ -1,0 +1,189 @@
+.#{$prefix}-nav-menu {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: $color-white;
+  margin-top: 1rem;
+
+  &__list {
+    flex-basis: 100%;
+    padding-left: 0;
+    list-style-type: none;
+  }
+
+  &__list[hidden] {
+    display: none;
+  }
+  
+  &__item {
+    align-items: center;
+    border-top: 1px solid $color-black--150;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0; // resets Rivet default margin-top
+    background-color: $color-black--050;
+  }
+  
+  &__item--more {
+    display: none;
+  }
+  
+  &__link {
+    flex-grow: 1;
+    padding: $sm $md;
+    font-size: $ts-14;
+    text-decoration: none;
+    color: $color-black;
+    
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      color: $color-blue;
+    }
+  }
+  
+  &__toggle {
+    align-items: center;
+    background: transparent;
+    border: none;
+    display: flex;
+    // flex-shrink: 1;
+    // TODO: figure out these magic numbers
+    height: 56px;
+    justify-content: center;
+    padding-top: $sm;
+    padding-right: $md;
+    padding-bottom: $sm;
+    padding-left: $md;
+    
+    &:focus {
+      outline: .125rem solid $color-blue;
+      outline-offset: .125rem;
+    }
+    
+    &[aria-expanded="true"] {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__link,
+  &__icon {
+    &:focus {
+      z-index: 1;
+    }
+  }
+
+  // TODO: Refactor this bit to make it less repetitive
+
+  // > .rvt-nav-menu__list > .rvt-nav-menu__item {
+  //   > .rvt-nav-menu__list > .rvt-nav-menu__item {
+  //     > .rvt-nav-menu__link {
+  //       text-indent: 40px;
+  //       background-color: $color-black--100;
+  //     }
+  //   }
+  // }
+
+  &__list--child-menu &__item {
+    background-color: $color-black--100;
+    border-color: $color-black--200;
+    text-indent: $lg;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-nav-menu {
+    display: block;
+    position: relative;
+    left: auto;
+    width: auto;
+    margin-top: 0;
+    margin-left: auto;
+    
+    & > &__list {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    &__item {
+      background-color: transparent;
+      border-top: none;
+      position: relative;
+      padding: 0;
+      margin-left: 0;
+    }
+    
+    &__item &__link {
+      padding: 0;
+      // HACK: Come back to fix this specificity problem
+      text-indent: 0 !important;
+    }
+    
+    &__item--more {
+      display: flex;
+      border-left: 1px solid $color-black--200;
+      padding-left: 1rem;
+    }
+
+    & > &__list.#{$prefix}-nav-menu__list--secondary {
+      display: none;
+    }
+    
+    &__list--child-menu {
+      position: absolute;
+      top: $lg;
+      left: 0;
+      width: 240px;
+      margin: 0;
+      padding: $xs 0;
+      box-shadow: $shadow-base;
+      background-color: $color-white;
+    }
+    
+    &__list--child-right {
+      left: auto;
+      right: 0;
+    }
+    
+    &__list--child-menu &__item {
+      background-color: transparent;
+    }
+    
+    &__list--child-menu &__item a {
+      padding: $xs $sm;
+    }
+    
+    &__list--child-menu &__item a:hover {
+      background-color: $color-blue;
+      color: $color-white;
+      text-decoration: none;
+    }
+    
+    &__list--child-menu &__link {
+      background-color: transparent;
+    }
+
+    &__toggle {
+      padding: 0;
+      height: $md * .825;
+      width: $md * .825;
+      margin-left: $xxs;
+      border-radius: 999rem;
+    }
+    
+    &__toggle:hover {
+      background-color: $color-blue;
+      color: $color-white;
+    }
+    
+    &__toggle svg {
+      width: $sm * .9;
+    }
+    
+    & > &__list > &__item:not(:first-child) {
+      margin-left: $sm * .825;
+    }
+  }
+}

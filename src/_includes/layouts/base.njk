@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/latest/rivet.min.css">
+  <link rel="stylesheet" href="./css/rivet-2-prototype-components.css">
+</head>
+<body>
+  {{ layoutContent | safe }}
+  <script src="./js/rivet-2-prototype-components.js"></script>
+  <script>
+    Rivet2Components.init();
+    
+    const mainMenu = document.querySelector('[data-sidenav]');
+    const mySideNav = new Rivet2Components.NavMenu(mainMenu, {
+      openAllOnInit: false
+    });
+  </script>
+</body>
+</html>

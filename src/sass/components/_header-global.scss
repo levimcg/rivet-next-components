@@ -1,0 +1,148 @@
+// Header system
+
+.#{$prefix}-header-global {
+  position: relative;
+  padding: $sm 0;
+  
+  &__toggles {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+  }
+  
+  &__secondary-toggle {
+    background: none;
+    border: 2px solid $color-black--200;
+    display: inline-flex;
+    align-items: center;
+    font-size: $ts-14;
+    height: $xl;
+    border-radius: $xxs;
+  }
+  
+  &__secondary-toggle svg {
+    width: $sm * .9;
+    height: $sm * .9;
+    color: $color-black--700;
+  }
+  
+  &__secondary-toggle:last-child {
+    margin-left: $xs;
+  }
+  
+  &__menu-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__menu-item a {
+    color: $color-black;
+    text-decoration: none;
+    font-size: $ts-14;
+  }
+  
+  &__menu-item > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+}
+
+@media screen and (min-width: $breakpoint-lg) {
+  .#{$prefix}-header-global {
+    &__toggles {
+      position: relative;
+      top: auto;
+      right: auto;
+    }
+    
+    &__secondary-toggle {
+      border: none;
+      padding: 0;
+      font-size: $ts-14;
+    }
+    
+    &__secondary-toggle:not(:last-child) {
+      margin-right: $sm;
+    }
+    
+    &__inner {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+// .#{$prefix}-header-global {
+//   align-items: center;
+//   border-top: $xxs solid $color-crimson;
+//   display: flex;
+//   justify-content: space-between;
+//   padding: $sm $xxl;
+
+//   &__menu {
+//     margin-left: auto;
+//   }
+
+//   &__menu-list {
+//     display: flex;
+//     
+//   }
+
+//   &__menu-item {
+//     margin-top: 0;
+//     padding: $xs $sm;
+
+//     a {
+//       color: $color-black;
+//       text-decoration: none;
+//       font-size: $ts-14;
+//     }
+
+//     a:hover,
+//     a:focus {
+//       text-decoration: underline;
+//     }
+//   }
+
+//   &__search {
+//     border-left: 1px solid $color-black--150;
+//     padding: $xs 0 $xs $sm;
+//     position: relative;
+//   }
+
+//   &__search-toggle {
+//     align-items: center;
+//     background: transparent;
+//     border: 0;
+//     display: flex;
+//     font-size: $ts-14;
+
+//     &:focus {
+//       outline: .125rem solid $color-blue;
+//       outline-offset: .125rem;
+//     }
+//   }
+
+//   &__search-icon {
+//     fill: $color-black--600;
+//   }
+
+//   &__search-text {
+//     line-height: 1.2;
+//     padding-left: $sm;
+//   }
+
+//   &__search-input {
+//     background: $color-white;
+//     box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
+//     border-radius: $xxs/2;
+//     margin-top: $xxs;
+//     position: absolute;
+//     padding: $md;
+//     right: 0;
+//     width: 316px;
+//   }
+// }

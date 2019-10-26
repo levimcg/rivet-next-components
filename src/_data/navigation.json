@@ -1,0 +1,121 @@
+{
+  "main": [
+    {
+      "text": "Expertise",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "Alzheimer's Disease",
+          "link": "#"
+        },
+        {
+          "text": "Indiana Health",
+          "link": "#"
+        },
+        {
+          "text": "Precision Health Initiative",
+          "link": "#"
+        },
+        {
+          "text": "Musculoskeletal Health",
+          "link": "#"
+        },
+        {
+          "text": "Traumatic Brain Injury",
+          "link": "#"
+        },
+        {
+          "text": "Global Health",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Education",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "MD Program",
+          "link": "#"
+        },
+        {
+          "text": "Graduate Medical Education",
+          "link": "#"
+        },
+        {
+          "text": "Graduate Degrees",
+          "link": "#"
+        },
+        {
+          "text": "Health Professions Programs",
+          "link": "#"
+        },
+        {
+          "text": "Continuing Medical Education",
+          "link": "#"
+        },
+        {
+          "text": "Medical Library",
+          "link": "#"
+        },
+        {
+          "text": "Mental Health Services",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Research",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "MD Program",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Campuses",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "Indianapolis",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Departments",
+      "link": "#"
+    },
+    {
+      "text": "News",
+      "link": "#",
+      "rightAlign": true,
+      "submenu": [
+        {
+          "text": "News Releases",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "More",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "About",
+          "link": "#"
+        },
+        {
+          "text": "Careers",
+          "link": "#"
+        },
+        {
+          "text": "Give",
+          "link": "#"
+        }
+      ]
+    }
+  ]
+}

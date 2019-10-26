@@ -1,0 +1,42 @@
+.#{$prefix}-header-local {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: $sm $xxl;
+
+  &__title {
+    font-size: $ts-26;
+    font-weight: 700;
+  }
+
+  &__menu {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__menu-item {
+    margin-top: 0;
+    padding: $xs;
+
+    a {
+      font-size: $ts-14;
+    }
+  }
+
+  &__title,
+  &__menu-item {
+    a {
+      color: $color-black;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.#{$prefix}-header-global + .#{$prefix}-header-local {
+  padding-top: 0;
+}
