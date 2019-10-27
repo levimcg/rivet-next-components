@@ -1,9 +1,15 @@
 .#{$prefix}-nav-menu {
-  position: absolute;
-  left: 0;
-  width: 100%;
+  position: relative;
   background-color: $color-white;
   margin-top: 1rem;
+  // This makes the mobile menu sit flush to the sides of small screens
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  /**
+   * This overides the padding on the header wrapper when the
+   * mobile menu is open.
+   */
+  margin-bottom: -$sm;
 
   &__list {
     flex-basis: 100%;
@@ -30,7 +36,7 @@
   
   &__link {
     flex-grow: 1;
-    padding: $sm $md;
+    padding: $sm*.825 $md;
     font-size: $ts-14;
     text-decoration: none;
     color: $color-black;
@@ -47,14 +53,18 @@
     background: transparent;
     border: none;
     display: flex;
-    // flex-shrink: 1;
-    // TODO: figure out these magic numbers
-    height: 56px;
+    height: 100%;
     justify-content: center;
     padding-top: $sm;
-    padding-right: $md;
+    padding-right: $lg;
     padding-bottom: $sm;
     padding-left: $md;
+    flex-shrink: 0;
+
+     svg {
+      width: $sm;
+      height: $sm;
+    }
     
     &:focus {
       outline: .125rem solid $color-blue;
@@ -100,6 +110,7 @@
     left: auto;
     width: auto;
     margin-top: 0;
+    margin-bottom: 0;
     margin-left: auto;
     
     & > &__list {
@@ -140,6 +151,7 @@
       padding: $xs 0;
       box-shadow: $shadow-base;
       background-color: $color-white;
+      z-index: 999;
     }
     
     &__list--child-right {
@@ -171,6 +183,7 @@
       width: $md * .825;
       margin-left: $xxs;
       border-radius: 999rem;
+      color: $color-black;
     }
     
     &__toggle:hover {

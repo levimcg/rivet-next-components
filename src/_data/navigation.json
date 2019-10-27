@@ -117,5 +117,45 @@
         }
       ]
     }
+  ],
+  "local": [
+    {
+      "text": "Education Programs",
+      "link": "#",
+      "submenu": [
+        {
+          "text": "MD",
+          "link": "#"
+        },
+        {
+          "text": "Graduate Degrees",
+          "link": "#"
+        }
+      ]
+    },
+    {
+      "text": "Research",
+      "link": "#"
+    },
+    {
+      "text": "Clinical Care",
+      "link": "#"
+    },
+    {
+      "text": "Careers",
+      "link": "#"
+    },
+    {
+      "text": "Faculty",
+      "link": "#"
+    },
+    {
+      "text": "News and Events",
+      "link": "#"
+    },
+    {
+      "text": "Contacts",
+      "link": "#"
+    }
   ]
 }

@@ -14,8 +14,13 @@
   <script>
     Rivet2Components.init();
     
-    const mainMenu = document.querySelector('[data-sidenav]');
+    const mainMenu = document.getElementById('global-menu');
+    const localNav = document.getElementById('local-menu');
+    
     const mySideNav = new Rivet2Components.NavMenu(mainMenu, {
+      openAllOnInit: false
+    });
+    const localMenuComponent = new Rivet2Components.NavMenu(localNav, {
       openAllOnInit: false
     });
   </script>

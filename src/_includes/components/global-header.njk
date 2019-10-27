@@ -1,10 +1,7 @@
 <div class="rvt-header-global">
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <div class="rvt-header-global__inner">
-      
       {% include "components/lockup.njk" %}
-      {% include "components/global-menu.njk" %}
-      
       <div class="rvt-header-global__toggles">
         <button class="rvt-header-global__secondary-toggle">
           {% include "icons/rvt-icon-magnifying-glass.svg" %}
@@ -12,10 +9,7 @@
         </button>
         <button class="rvt-header-global__secondary-toggle rvt-hide-lg-up" data-global-menu-toggle aria-expanded="false">Menu</button>
       </div>
-      
-      
+      {% include "components/global-nav.njk" %}
     </div><!-- end inner wrapper -->
   </div> <!-- main rvt-container -->
 </div> <!-- end global header -->
-
-{# <img src="https://www.fillmurray.com/1200/800" alt=""> #}

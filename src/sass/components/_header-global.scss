@@ -2,11 +2,13 @@
 
 .#{$prefix}-header-global {
   position: relative;
-  padding: $sm 0;
+  padding-top: $sm;
+  padding-bottom: $sm;
+  border-bottom: 1px solid $color-black--150;
   
   &__toggles {
     position: absolute;
-    top: 1rem;
+    top: $sm * 1.25;
     right: 1.5rem;
     display: flex;
   }
@@ -17,10 +19,10 @@
     display: inline-flex;
     align-items: center;
     font-size: $ts-14;
-    height: $xl;
+    height: $lg;
     border-radius: $xxs;
   }
-  
+
   &__secondary-toggle svg {
     width: $sm * .9;
     height: $sm * .9;
@@ -30,7 +32,7 @@
   &__secondary-toggle:last-child {
     margin-left: $xs;
   }
-  
+
   &__menu-list {
     list-style-type: none;
     padding: 0;
@@ -52,6 +54,8 @@
 
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-global {
+    border-bottom: none;
+    
     &__toggles {
       position: relative;
       top: auto;

@@ -1,0 +1,42 @@
+<nav class="rvt-nav-menu" aria-label="Main menu" id="global-menu" data-sidenav>
+  <ul class="rvt-nav-menu__list" data-sidenav-list>
+    {% for item in navigation.main %}
+      {% if item.text == "More" %}
+      <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
+        <button href="#" class="rvt-header-global__secondary-toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+          {% include "icons/rvt-icon-ellipsis.svg" %}
+          <span class="rvt-m-left-xs">{{ item.text }}</span>
+        </button>
+        <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" data-sidenav-list="global-toggle-{{ loop.index }}">
+          {% for sub in item.submenu %}
+          <li class="rvt-nav-menu__item">
+            <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </li>
+      {% for sub in item.submenu %}
+      <li class="rvt-nav-menu__item rvt-hide-lg-up">
+        <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+      </li>
+      {% endfor %}
+      {% else %}
+      <li class="rvt-nav-menu__item">
+        <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
+        {% if item.submenu %}
+        <button class="rvt-nav-menu__toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+          {% include "icons/rvt-icon-chevron-down.svg" %}
+        </button>
+        <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}" data-sidenav-list="global-toggle-{{ loop.index }}">
+          {% for sub in item.submenu %}
+          <li class="rvt-nav-menu__item">
+            <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
