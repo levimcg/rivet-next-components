@@ -2,11 +2,11 @@
   "main": [
     {
       "text": "Expertise",
-      "link": "#",
+      "link": "./local-property.html",
       "submenu": [
         {
           "text": "Alzheimer's Disease",
-          "link": "#"
+          "link": "./local-property.html"
         },
         {
           "text": "Indiana Health",

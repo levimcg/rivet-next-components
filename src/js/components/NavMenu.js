@@ -11,8 +11,8 @@ export default class NavMenu {
     /* eslint-enable */
     
     this.element = element;
-    this.onOpen = options.onOpen;
-    this.openAllOnInit = options.openAllOnInit;
+    this.onOpen = settings.onOpen;
+    this.openAllOnInit = settings.openAllOnInit;
 
     // get DOM selectors
     this.childMenus = this.element.querySelectorAll('[data-sidenav-toggle] + [data-sidenav-list]');

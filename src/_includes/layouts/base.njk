@@ -10,21 +10,19 @@
 </head>
 <body>
   {{ layoutContent | safe }}
+  <script src="https://assets.uits.iu.edu/javascript/rivet/latest/rivet.min.js"></script>
   <script src="./js/rivet-2-prototype-components.js"></script>
+  
   <script>
     Rivet2Components.init();
     
     const mainMenu = document.getElementById('global-menu');
     const localNav = document.getElementById('local-menu');
     
-    const mySideNav = new Rivet2Components.NavMenu(mainMenu, {
-      openAllOnInit: false
-    });
+    const mySideNav = new Rivet2Components.NavMenu(mainMenu);
     
     if (localNav) {
-      const localMenuComponent = new Rivet2Components.NavMenu(localNav, {
-        openAllOnInit: false
-      });
+      const localMenuComponent = new Rivet2Components.NavMenu(localNav);
     }
   </script>
 </body>

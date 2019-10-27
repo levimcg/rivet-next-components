@@ -1,14 +1,17 @@
 .#{$prefix}-header-local {
+  background-color: $color-white;
   position: relative;
   padding-top: $sm;
   padding-bottom: $sm;
-  
+  border-bottom: 1px solid $color-black--200;
+
   /**
    * Mobile menu toggle
    */
+
   &__menu-toggle {
     position: absolute;
-    top: $xs;
+    top: $sm;
     right: 1.5rem;
     width: $lg;
     height: $lg;
@@ -19,21 +22,26 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    padding: 0;
 
     svg {
       width: $sm;
       height: $sm;
     }
   }
-  
+
   &__menu-toggle[aria-expanded="true"] {
+    background-color: $color-blue;
+    color: $color-white;
+    border-color: $color-blue;
+
     svg {
       transform: rotate(180deg);
     }
   }
-  
+
   &__title {
-    font-size: $ts-20;
+    font-size: $ts-18;
     font-weight: 700;
     line-height: 1.1;
     display: block;
@@ -54,7 +62,7 @@
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-local {
     padding-top: $xs;
-    
+
     &__inner {
       align-items: center;
       display: flex;

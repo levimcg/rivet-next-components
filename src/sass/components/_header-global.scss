@@ -1,14 +1,17 @@
 .#{$prefix}-header-global {
+  background-color: $color-white;
   position: relative;
   padding-top: $sm;
   padding-bottom: $sm;
+  border-top: $xxs solid $color-crimson;
   border-bottom: 1px solid $color-black--150;
-  
+
   &__inner {
     position: relative;
   }
-  
+
   // TODO: Refactor this repetitive stuff
+
   &__menu-toggle,
   &__search-toggle,
   &__more-toggle {
@@ -21,24 +24,26 @@
     border-radius: $xxs;
   }
 
+  &__menu-toggle[aria-expanded="true"] {
+    background-color: $color-blue;
+    color: $color-white;
+    border-color: $color-blue;
+  }
+
   &__menu-toggle svg,
   &__search-toggle svg,
   &__more-toggle svg {
     width: $sm * .9;
     height: $sm * .9;
-    color: $color-black--700;
   }
-  
+
   &__menu-toggle {
     position: absolute;
     right: $xl;
   }
-  
-  &__search-toggle {
-    margin-left: $xs;
-  }
 
   &__search-toggle {
+    margin-left: $xs;
     position: absolute;
     right: 0;
     top: 0;
@@ -54,7 +59,7 @@
     text-decoration: none;
     font-size: $ts-14;
   }
-  
+
   &__menu-item > ul {
     list-style: none;
     margin: 0;
@@ -66,7 +71,7 @@
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-global {
     border-bottom: none;
-    
+
     &__menu-toggle,
     &__search-toggle,
     &__more-toggle {
@@ -74,13 +79,14 @@
       padding: 0;
       font-size: $ts-14;
     }
-    
+
     &__search-toggle {
       position: relative;
       top: auto;
       right: auto;
+      margin-left: $sm;
     }
-    
+
     &__inner {
       display: flex;
       align-items: center;

@@ -1,0 +1,66 @@
+{# Duplicate for normal mobile menu #}
+<nav class="rvt-nav-menu rvt-hide-lg-up" aria-label="Main menu" id="global-menu" data-sidenav>
+  <ul class="rvt-nav-menu__list" data-sidenav-list>
+    {% for item in navigation.main %}
+      {% if item.text == "More" %}
+        <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
+          <button href="#" class="rvt-header-global__more-toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+            {% include "icons/rvt-icon-ellipsis.svg" %}
+            <span class="rvt-m-left-xs">{{ item.text }}</span>
+          </button>
+          <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" data-sidenav-list="global-toggle-{{ loop.index }}">
+            {% for sub in item.submenu %}
+            <li class="rvt-nav-menu__item">
+              <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </li>
+        {% for sub in item.submenu %}
+        <li class="rvt-nav-menu__item rvt-hide-lg-up">
+          <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+        </li>
+        {% endfor %}
+      {% else %}
+        <li class="rvt-nav-menu__item">
+          <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
+          {% if item.submenu %}
+          <button class="rvt-nav-menu__toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+            {% include "icons/rvt-icon-chevron-down.svg" %}
+          </button>
+          <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}" data-sidenav-list="global-toggle-{{ loop.index }}">
+            {% for sub in item.submenu %}
+            <li class="rvt-nav-menu__item">
+              <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>
+
+{#
+  Main menu behid a dropdown on large screens once user navigates
+  to sections deeper than the top level of navigation. Using utlity classes
+  here to hide on smaller screens.
+#}
+<nav class="rvt-nav-menu rvt-hide-lg-down">
+  <button class="rvt-nav-menu__secondary-toggle" id="secondary-menu-toggle" aria-expanded="false">
+    {% include "icons/rvt-icon-menu.svg" %}
+    <span class="rvt-m-left-xs">Global navigation</span>
+  </button>
+  <ul class="rvt-nav-menu__secondary-menu" id="secondary-menu">
+  {% for item in navigation.main %}
+    {% if item.text == "More" %}
+      {% for sub in item.submenu %}
+      <li class="rvt-nav-menu__item"><a href="{{ sub.link }}">{{ sub.text }}</a></li>
+      {% endfor %}
+    {% else %}
+      <li class="rvt-nav-menu__item"><a href="{{ item.link }}">{{ item.text }}</a></li>
+    {% endif %}
+  {% endfor %}
+  </ul>
+</nav>

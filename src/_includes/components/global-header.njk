@@ -2,21 +2,27 @@
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <div class="rvt-header-global__inner">
       {% include "components/lockup.njk" %}
-      
       <button
         class="rvt-header-global__menu-toggle rvt-hide-lg-up"
-        data-global-menu-toggle aria-expanded="false"
+        aria-expanded="false"
+        data-global-menu-toggle 
       >
-        Menu
+        {% include "icons/rvt-icon-menu.svg" %}
+        <span class="rvt-m-left-xs">Menu</span>
       </button>
-      {% include "components/global-nav.njk" %}
-      
+
+      {% if sectionPage %}
+        {% include "components/global-nav-secondary.njk" %}
+      {% else %}
+        {% include "components/global-nav.njk" %}
+      {% endif %}
+
       <button class="rvt-header-global__search-toggle">
         {% include "icons/rvt-icon-magnifying-glass.svg" %}
         <span class="rvt-sr-only">Toggle Search Box</span>
       </button>
       <!-- Search implmentation here -->
-      
+
     </div><!-- end inner wrapper -->
   </div> <!-- main rvt-container -->
 </div> <!-- end global header -->

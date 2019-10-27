@@ -5,10 +5,12 @@
   // This makes the mobile menu sit flush to the sides of small screens
   left: -1.5rem;
   width: calc(100% + 3rem);
+
   /**
-   * This overides the padding on the header wrapper when the
+   * This overrides the padding on the header wrapper when the
    * mobile menu is open.
    */
+
   margin-bottom: -$sm;
 
   &__list {
@@ -20,7 +22,7 @@
   &__list[hidden] {
     display: none;
   }
-  
+
   &__item {
     align-items: center;
     border-top: 1px solid $color-black--150;
@@ -29,29 +31,36 @@
     margin-top: 0; // resets Rivet default margin-top
     background-color: $color-black--050;
   }
-  
+
   &__item--more {
     display: none;
   }
-  
+
   &__link {
     flex-grow: 1;
     padding: $sm*.825 $md;
     font-size: $ts-14;
     text-decoration: none;
     color: $color-black;
-    
+
     &:focus,
     &:hover {
       text-decoration: underline;
       color: $color-blue;
     }
   }
-  
+
+  /**
+   * Child menu toggle styles
+   */
+
   &__toggle {
     align-items: center;
     background: transparent;
-    border: none;
+    border-left: 1px solid $color-black--200;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
     display: flex;
     height: 100%;
     justify-content: center;
@@ -61,16 +70,16 @@
     padding-left: $md;
     flex-shrink: 0;
 
-     svg {
+    svg {
       width: $sm;
       height: $sm;
     }
-    
+
     &:focus {
       outline: .125rem solid $color-blue;
       outline-offset: .125rem;
     }
-    
+
     &[aria-expanded="true"] {
       svg {
         transform: rotate(180deg);
@@ -112,12 +121,12 @@
     margin-top: 0;
     margin-bottom: 0;
     margin-left: auto;
-    
+
     & > &__list {
       display: flex;
       flex-direction: row;
     }
-    
+
     &__item {
       background-color: transparent;
       border-top: none;
@@ -125,23 +134,23 @@
       padding: 0;
       margin-left: 0;
     }
-    
+
+    & > &__list > &__item:not(:first-child) {
+      margin-left: $sm * .825;
+    }
+
     &__item &__link {
       padding: 0;
       // HACK: Come back to fix this specificity problem
       text-indent: 0 !important;
     }
-    
+
     &__item--more {
       display: flex;
       border-left: 1px solid $color-black--200;
       padding-left: 1rem;
     }
 
-    & > &__list.#{$prefix}-nav-menu__list--secondary {
-      display: none;
-    }
-    
     &__list--child-menu {
       position: absolute;
       top: $lg;
@@ -153,29 +162,33 @@
       background-color: $color-white;
       z-index: 999;
     }
-    
+
     &__list--child-right {
       left: auto;
       right: 0;
     }
-    
+
     &__list--child-menu &__item {
       background-color: transparent;
     }
-    
+
     &__list--child-menu &__item a {
       padding: $xs $sm;
     }
-    
+
     &__list--child-menu &__item a:hover {
       background-color: $color-blue;
       color: $color-white;
       text-decoration: none;
     }
-    
+
     &__list--child-menu &__link {
       background-color: transparent;
     }
+
+    /**
+     * Main child menu toggle styles
+     */
 
     &__toggle {
       padding: 0;
@@ -184,19 +197,71 @@
       margin-left: $xxs;
       border-radius: 999rem;
       color: $color-black;
+      border-left: none;
     }
-    
+
     &__toggle:hover {
       background-color: $color-blue;
       color: $color-white;
     }
-    
+
     &__toggle svg {
       width: $sm * .9;
     }
-    
-    & > &__list > &__item:not(:first-child) {
-      margin-left: $sm * .825;
+
+    /**
+     * Styles for main global menu when it is behind a toggle
+     * on deeper section pages.
+     */
+
+    &__secondary-toggle {
+      background: none;
+      border: none;
+      display: inline-flex;
+      font-size: $ts-14;
+      align-items: center;
+      margin-right: $sm;
+    }
+
+    /**
+     * TODO: This duplicates a lot of styles from the
+     * normal main nav dropdown menus. Need to refactor this
+     * so that it can be used here and for all other child menus.
+     */
+
+    &__secondary-menu {
+      position: absolute;
+      top: $lg;
+      right: 0;
+      width: 240px;
+      margin: 0;
+      padding: $xs 0;
+      box-shadow: $shadow-base;
+      background-color: $color-white;
+      z-index: 999;
+    }
+
+    &__secondary-menu &__item {
+      background-color: transparent;
+    }
+
+    &__secondary-menu &__item a {
+      padding: $xs $sm;
+      text-decoration: none;
+      font-size: $ts-14;
+      display: block;
+      width: 100%;
+      color: $color-black;
+    }
+
+    &__secondary-menu &__item a:hover {
+      background-color: $color-blue;
+      color: $color-white;
+      text-decoration: none;
+    }
+
+    &__secondary-menu &__link {
+      background-color: transparent;
     }
   }
 }
