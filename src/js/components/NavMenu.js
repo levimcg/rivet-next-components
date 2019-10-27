@@ -1,6 +1,5 @@
 export default class NavMenu {
   constructor(element, options) {
-    /* eslint-disable */
     const defaultOptions = {
       openAllOnInit: false,
       onOpen: null,
@@ -8,7 +7,6 @@ export default class NavMenu {
     };
 
     const settings = Object.assign({}, defaultOptions, options);
-    /* eslint-enable */
     
     this.element = element;
     this.onOpen = settings.onOpen;
