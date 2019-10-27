@@ -26,6 +26,12 @@
     }
   }
   
+  &__menu-toggle[aria-expanded="true"] {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+  
   &__title {
     font-size: $ts-20;
     font-weight: 700;

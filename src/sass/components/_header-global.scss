@@ -1,19 +1,17 @@
-// Header system
-
 .#{$prefix}-header-global {
   position: relative;
   padding-top: $sm;
   padding-bottom: $sm;
   border-bottom: 1px solid $color-black--150;
   
-  &__toggles {
-    position: absolute;
-    top: $sm * 1.25;
-    right: 1.5rem;
-    display: flex;
+  &__inner {
+    position: relative;
   }
   
-  &__secondary-toggle {
+  // TODO: Refactor this repetitive stuff
+  &__menu-toggle,
+  &__search-toggle,
+  &__more-toggle {
     background: none;
     border: 2px solid $color-black--200;
     display: inline-flex;
@@ -23,14 +21,27 @@
     border-radius: $xxs;
   }
 
-  &__secondary-toggle svg {
+  &__menu-toggle svg,
+  &__search-toggle svg,
+  &__more-toggle svg {
     width: $sm * .9;
     height: $sm * .9;
     color: $color-black--700;
   }
   
-  &__secondary-toggle:last-child {
+  &__menu-toggle {
+    position: absolute;
+    right: $xl;
+  }
+  
+  &__search-toggle {
     margin-left: $xs;
+  }
+
+  &__search-toggle {
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 
   &__menu-list {
@@ -56,20 +67,18 @@
   .#{$prefix}-header-global {
     border-bottom: none;
     
-    &__toggles {
-      position: relative;
-      top: auto;
-      right: auto;
-    }
-    
-    &__secondary-toggle {
+    &__menu-toggle,
+    &__search-toggle,
+    &__more-toggle {
       border: none;
       padding: 0;
       font-size: $ts-14;
     }
     
-    &__secondary-toggle:not(:last-child) {
-      margin-right: $sm;
+    &__search-toggle {
+      position: relative;
+      top: auto;
+      right: auto;
     }
     
     &__inner {
@@ -78,75 +87,3 @@
     }
   }
 }
-
-// .#{$prefix}-header-global {
-//   align-items: center;
-//   border-top: $xxs solid $color-crimson;
-//   display: flex;
-//   justify-content: space-between;
-//   padding: $sm $xxl;
-
-//   &__menu {
-//     margin-left: auto;
-//   }
-
-//   &__menu-list {
-//     display: flex;
-//     
-//   }
-
-//   &__menu-item {
-//     margin-top: 0;
-//     padding: $xs $sm;
-
-//     a {
-//       color: $color-black;
-//       text-decoration: none;
-//       font-size: $ts-14;
-//     }
-
-//     a:hover,
-//     a:focus {
-//       text-decoration: underline;
-//     }
-//   }
-
-//   &__search {
-//     border-left: 1px solid $color-black--150;
-//     padding: $xs 0 $xs $sm;
-//     position: relative;
-//   }
-
-//   &__search-toggle {
-//     align-items: center;
-//     background: transparent;
-//     border: 0;
-//     display: flex;
-//     font-size: $ts-14;
-
-//     &:focus {
-//       outline: .125rem solid $color-blue;
-//       outline-offset: .125rem;
-//     }
-//   }
-
-//   &__search-icon {
-//     fill: $color-black--600;
-//   }
-
-//   &__search-text {
-//     line-height: 1.2;
-//     padding-left: $sm;
-//   }
-
-//   &__search-input {
-//     background: $color-white;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, .25);
-//     border-radius: $xxs/2;
-//     margin-top: $xxs;
-//     position: absolute;
-//     padding: $md;
-//     right: 0;
-//     width: 316px;
-//   }
-// }

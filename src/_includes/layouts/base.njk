@@ -20,9 +20,12 @@
     const mySideNav = new Rivet2Components.NavMenu(mainMenu, {
       openAllOnInit: false
     });
-    const localMenuComponent = new Rivet2Components.NavMenu(localNav, {
-      openAllOnInit: false
-    });
+    
+    if (localNav) {
+      const localMenuComponent = new Rivet2Components.NavMenu(localNav, {
+        openAllOnInit: false
+      });
+    }
   </script>
 </body>
 </html>
