@@ -3,11 +3,11 @@
     {% for item in navigation.main %}
       {% if item.text == "More" %}
       <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
-        <button href="#" class="rvt-header-global__more-toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+        <button href="#" class="rvt-header-global__more-toggle" data-dropdown-toggle="more-menu">
           {% include "icons/rvt-icon-ellipsis.svg" %}
           <span class="rvt-m-left-xs">{{ item.text }}</span>
         </button>
-        <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" data-sidenav-list="global-toggle-{{ loop.index }}">
+        <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" id="more-menu" aria-hidden="true">
           {% for sub in item.submenu %}
           <li class="rvt-nav-menu__item">
             <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
