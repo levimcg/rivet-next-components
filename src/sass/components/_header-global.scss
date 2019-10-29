@@ -92,6 +92,10 @@
   &__search-box input[type="text"] {
     background-color: $color-white;
   }
+
+  &__search-box[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $breakpoint-lg) {
@@ -130,10 +134,6 @@
       box-shadow: $shadow-base;
       background-color: $color-white;
       z-index: 999;
-    }
-    
-    &__search-box[aria-hidden="true"] {
-      display: none;
     }
   }
 }
