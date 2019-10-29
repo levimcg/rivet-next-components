@@ -24,6 +24,13 @@
     border-radius: $xxs;
   }
 
+  &__menu-toggle span {
+    font-size: $ts-12;
+    font-weight: 700;
+  }
+
+  /* Active state */
+
   &__menu-toggle[aria-expanded="true"] {
     background-color: $color-blue;
     color: $color-white;

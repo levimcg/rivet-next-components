@@ -1,7 +1,6 @@
 import NavMenu from './components/NavMenu';
 
-// This is lame. Needs refactored into something reusable for the search.
-
+// TODO: Refactor this into something coherent
 function init() {
   function openMenu(menu, toggle) {
     menu.removeAttribute('hidden');

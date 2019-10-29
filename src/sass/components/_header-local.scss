@@ -11,7 +11,7 @@
 
   &__menu-toggle {
     position: absolute;
-    top: $sm;
+    top: $sm * .65;
     right: 1.5rem;
     width: $lg;
     height: $lg;
