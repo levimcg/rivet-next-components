@@ -3,7 +3,6 @@ import NavMenu from './components/NavMenu';
 // This is lame. Needs refactored into something reusable for the search.
 
 function init() {
-  /** */
   function openMenu(menu, toggle) {
     menu.removeAttribute('hidden');
     toggle.setAttribute('aria-expanded', 'true');
