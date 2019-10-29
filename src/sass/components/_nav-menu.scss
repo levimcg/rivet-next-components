@@ -2,8 +2,12 @@
   position: relative;
   background-color: $color-white;
   margin-top: 1rem;
-  // This makes the mobile menu sit flush to the sides of small screens
-  left: -1.5rem;
+
+  /**
+   * This makes the mobile menu flush to the sides of small screens. Use
+   * this code to make it break out of the rivet container on small screens.
+   */
+  left: -1.5rem; // Size of the Rivet .container padding.
   width: calc(100% + 3rem);
 
   /**

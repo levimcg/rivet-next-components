@@ -17,12 +17,22 @@
         {% include "components/global-nav.njk" %}
       {% endif %}
 
-      <button class="rvt-header-global__search-toggle">
+      <button class="rvt-header-global__search-toggle" data-dropdown-toggle="search-box">
         {% include "icons/rvt-icon-magnifying-glass.svg" %}
         <span class="rvt-sr-only">Toggle Search Box</span>
       </button>
       <!-- Search implmentation here -->
-
+      <div class="rvt-header-global__search-box" id="search-box" aria-hidden="true">
+        <form action="">
+            <label for="search" class="rvt-sr-only">Search</label>
+            <div class="rvt-input-group">
+              <input class="rvt-input-group__input" type="text" id="search">
+              <div class="rvt-input-group__append">
+                <button class="rvt-button">Search</button>
+              </div>
+            </div>
+          </div>
+        </form>
     </div><!-- end inner wrapper -->
   </div> <!-- main rvt-container -->
 </div> <!-- end global header -->

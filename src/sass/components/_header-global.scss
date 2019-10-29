@@ -66,6 +66,32 @@
     padding: 0;
     background-color: #f7f7f7;
   }
+
+  &__search-box {
+    position: relative;
+    margin-top: 1rem;
+    background-color: $color-black--050;
+    padding: 1rem 1.5rem ;
+    border-top: 1px solid $color-black--150;
+
+    /**
+     * This makes the mobile menu flush to the sides of small screens. Use
+     * this code to make it break out of the rivet container on small screens.
+     */
+    left: -1.5rem; // Size of the Rivet .container padding.
+    width: calc(100% + 3rem);
+
+    /**
+     * This overrides the padding on the header wrapper when the
+     * mobile menu is open.
+     */
+
+    margin-bottom: -$sm;
+  }
+  
+  &__search-box input[type="text"] {
+    background-color: $color-white;
+  }
 }
 
 @media screen and (min-width: $breakpoint-lg) {
@@ -90,6 +116,24 @@
     &__inner {
       display: flex;
       align-items: center;
+      position: relative;
+    }
+
+    &__search-box {
+      position: absolute;
+      top: $lg;
+      left: auto;
+      right: 0;
+      width: 360px;
+      margin: 0;
+      padding: $sm;
+      box-shadow: $shadow-base;
+      background-color: $color-white;
+      z-index: 999;
+    }
+    
+    &__search-box[aria-hidden="true"] {
+      display: none;
     }
   }
 }
