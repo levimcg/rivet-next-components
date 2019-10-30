@@ -34,8 +34,13 @@
     font-size: $ts-14;
     height: $lg;
     border-radius: $xxs;
+
+    &:focus {
+      outline: $xxs/2 solid $color-blue;
+      outline-offset: $xxs/2;
+    }
   }
-  
+
   &__menu-toggle svg,
   &__search-toggle svg,
   &__more-toggle svg {
@@ -60,7 +65,8 @@
   }
 
   &__menu-toggle:hover,
-  &__search-toggle:hover {
+  &__search-toggle:hover,
+  &__more-toggle:hover {
     background-color: $color-blue;
     border-color: $color-blue;
     color: $color-white;
@@ -135,10 +141,8 @@
       flex-wrap: wrap;
     }
 
-    &__menu-toggle,
     &__more-toggle {
       border: none;
-      padding: 0;
       font-size: $ts-14;
     }
 
@@ -146,7 +150,6 @@
       position: relative;
       top: auto;
       right: auto;
-      margin-left: $sm;
       border-color: transparent;
     }
 

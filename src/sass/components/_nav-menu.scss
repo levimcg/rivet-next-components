@@ -227,6 +227,18 @@
       display: inline-flex;
       font-size: $ts-14;
       align-items: center;
+      padding: $xxs $xs;
+      border-radius: $xxs;
+
+      &:focus {
+        outline: $xxs/2 solid $color-blue;
+        outline-offset: $xxs/2;
+      }
+      
+      &:hover {
+        background-color: $color-blue;
+        color: $color-white;
+      }
     }
 
     /**
