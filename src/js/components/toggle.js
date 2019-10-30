@@ -35,17 +35,14 @@ export default function toggle() {
   function showElement(id) {
     const showTrigger = document.querySelector(`[data-toggle="${id}"]`);
     const showElement = document.getElementById(id);
-
     showTrigger.setAttribute('aria-expanded', 'true');
     showElement.classList.add('rvt-display-block');
     currentElement = id;
-    console.log(id);
   }
 
   function hideElement(id) {
     const hideTrigger = document.querySelector(`[data-toggle="${id}"]`);
     const hideElement = document.getElementById(id);
-
     hideTrigger.setAttribute('aria-expanded', 'false');
     hideElement.classList.remove('rvt-display-block');
     currentElement = null;
