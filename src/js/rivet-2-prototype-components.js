@@ -1,5 +1,3 @@
-import NavMenu from './components/NavMenu';
-
 // TODO: Refactor this into something coherent
 function init() {
   function openMenu(menu, toggle) {
@@ -42,21 +40,21 @@ function init() {
     });
   }
   
-  const secondaryMenu = document.getElementById('secondary-menu');
-  const secondaryToggle = document.getElementById('secondary-menu-toggle');
+  // const secondaryMenu = document.getElementById('secondary-menu');
+  // const secondaryToggle = document.getElementById('secondary-menu-toggle');
 
-  if (secondaryMenu) {
-    secondaryMenu.setAttribute('hidden', '');
-    // Listen for clicks and toggle
-    secondaryToggle.addEventListener('click', () => {
-      let isExpanded = secondaryToggle.getAttribute('aria-expanded');
-      if (isExpanded == 'false') {
-        openMenu(secondaryMenu, secondaryToggle);
-      } else {
-        closeMenu(secondaryMenu, secondaryToggle);
-      }
-    });
-  }
+  // if (secondaryMenu) {
+  //   secondaryMenu.setAttribute('hidden', '');
+  //   // Listen for clicks and toggle
+  //   secondaryToggle.addEventListener('click', () => {
+  //     let isExpanded = secondaryToggle.getAttribute('aria-expanded');
+  //     if (isExpanded == 'false') {
+  //       openMenu(secondaryMenu, secondaryToggle);
+  //     } else {
+  //       closeMenu(secondaryMenu, secondaryToggle);
+  //     }
+  //   });
+  // }
 }
 
-export default { NavMenu, init };
+export default { init };

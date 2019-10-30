@@ -1,13 +1,21 @@
 <nav class="rvt-nav-menu" aria-label="Section menu" id="local-menu">
-  <ul class="rvt-nav-menu__list" data-sidenav-list>
+  <ul class="rvt-nav-menu__list">
     {% for item in navigation.local %}
     <li class="rvt-nav-menu__item">
       <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
       {% if item.submenu %}
-      <button class="rvt-nav-menu__toggle" data-sidenav-toggle="global-toggle-{{ loop.index }}">
+      <button
+        class="rvt-nav-menu__toggle"
+        data-dropdown-toggle="local-toggle-{{ loop.index }}"
+        aria-expanded="false"
+      >
         {% include "icons/rvt-icon-chevron-down.svg" %}
       </button>
-      <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}" data-sidenav-list="global-toggle-{{ loop.index }}">
+      <ul
+        class="rvt-nav-menu__list rvt-nav-menu__list--child-menu {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}"
+        id="local-toggle-{{ loop.index }}"
+        aria-hidden="true"
+      >
         {% for sub in item.submenu %}
         <li class="rvt-nav-menu__item">
           <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>

@@ -109,6 +109,10 @@
   //   }
   // }
 
+  &__list--child-menu[aria-hidden="true"] {
+    display: none;
+  }
+
   &__list--child-menu &__item {
     background-color: $color-black--100;
     border-color: $color-black--200;
@@ -165,10 +169,6 @@
       box-shadow: $shadow-base;
       background-color: $color-white;
       z-index: 999;
-    }
-    
-    &__list--child-menu[aria-hidden="true"] {
-      display: none;
     }
 
     &__list--child-right {
@@ -246,6 +246,10 @@
       box-shadow: $shadow-base;
       background-color: $color-white;
       z-index: 999;
+    }
+
+    &__secondary-menu[aria-hidden="true"] {
+      display: none;
     }
 
     &__secondary-menu &__item {
