@@ -1,0 +1,645 @@
+/*!
+* rivet-next-components - @version 0.0.1
+
+* Copyright (C) 2018 The Trustees of Indiana University
+* SPDX-License-Identifier: BSD-3-Clause
+*/
+
+/* stylelint-disable */
+/* stylelint-enable */
+@font-face {
+  font-family: 'BentonSansCondRegular';
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot");
+  /* stylelint-disable */
+  src: url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix") format("embedded-opentype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff") format("woff"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf") format("truetype"), url("https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular") format("svg");
+  /* stylelint-enable */
+  font-style: normal;
+  font-weight: normal;
+}
+
+.rvt-header-global {
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-top: 0.25rem solid #990000;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.rvt-header-global__skip-link {
+  position: fixed;
+  top: -6rem;
+  padding: 0.5rem;
+  z-index: 999;
+}
+
+.rvt-header-global__skip-link:focus {
+  top: 0;
+  background-color: #ffffff;
+}
+
+.rvt-header-global__inner {
+  position: relative;
+}
+
+.rvt-header-global__menu-toggle, .rvt-header-global__search-toggle, .rvt-header-global__more-toggle {
+  background: none;
+  border: 0.125rem solid #dddddd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.875rem;
+  height: 2rem;
+  border-radius: 0.25rem;
+}
+
+.rvt-header-global__menu-toggle:focus, .rvt-header-global__search-toggle:focus, .rvt-header-global__more-toggle:focus {
+  outline: 0.125rem solid #006298;
+  outline-offset: 0.125rem;
+}
+
+.rvt-header-global__menu-toggle svg,
+.rvt-header-global__search-toggle svg,
+.rvt-header-global__more-toggle svg {
+  width: 0.9rem;
+  height: 0.9rem;
+}
+
+.rvt-header-global__menu-toggle[aria-expanded="true"], .rvt-header-global__search-toggle[aria-expanded="true"] {
+  background-color: #006298;
+  color: #ffffff;
+  border-color: #006298;
+}
+
+.rvt-header-global__menu-toggle {
+  position: absolute;
+  right: 2.5rem;
+}
+
+.rvt-header-global__menu-toggle span {
+  font-size: 0.75rem;
+}
+
+.rvt-header-global__menu-toggle:hover, .rvt-header-global__search-toggle:hover, .rvt-header-global__more-toggle:hover {
+  background-color: #006298;
+  border-color: #006298;
+  color: #ffffff;
+}
+
+.rvt-header-global__search-toggle {
+  margin-left: 0.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.rvt-header-global__menu-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.rvt-header-global__menu-item a {
+  color: #333333;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.rvt-header-global__menu-item > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.rvt-header-global__search-box {
+  position: relative;
+  margin-top: 1rem;
+  background-color: #fafafa;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eaeaea;
+  /**
+     * This makes the mobile menu flush to the sides of small screens. Use
+     * this code to make it break out of the rivet container on small screens.
+     */
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  /**
+     * This overrides the padding on the header wrapper when the
+     * mobile menu is open.
+     */
+  margin-bottom: -1rem;
+}
+
+.rvt-header-global__search-box input[type="text"] {
+  background-color: #ffffff;
+}
+
+.rvt-header-global__search-box[aria-hidden="true"] {
+  display: none;
+}
+
+@media screen and (min-width: 67.5em) {
+  .rvt-header-global {
+    border-bottom: none;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .rvt-header-global__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .rvt-header-global__more-toggle {
+    border: none;
+    font-size: 0.875rem;
+  }
+  .rvt-header-global__search-toggle {
+    position: relative;
+    top: auto;
+    right: auto;
+    border-color: transparent;
+  }
+  .rvt-header-global__search-box {
+    position: absolute;
+    top: 2.5rem;
+    left: auto;
+    right: 0;
+    margin: 0;
+    padding: 1rem;
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+    z-index: 999;
+  }
+}
+
+.rvt-header-local {
+  background-color: #ffffff;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eaeaea;
+  /**
+   * Mobile menu toggle
+   */
+}
+
+.rvt-header-local__menu-toggle {
+  position: absolute;
+  top: 0.65rem;
+  right: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999rem;
+  background: none;
+  border: 0.125rem solid #dddddd;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  padding: 0;
+}
+
+.rvt-header-local__menu-toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rvt-header-local__menu-toggle:hover {
+  background-color: #006298;
+  border-color: #006298;
+  color: #ffffff;
+}
+
+.rvt-header-local__menu-toggle[aria-expanded="true"] {
+  background-color: #006298;
+  color: #ffffff;
+  border-color: #006298;
+}
+
+.rvt-header-local__menu-toggle[aria-expanded="true"] svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.rvt-header-local__title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.1;
+  display: block;
+  padding-right: 4rem;
+}
+
+.rvt-header-local__title a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.rvt-header-local__title a:hover,
+.rvt-header-local__title a:focus {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 67.5em) {
+  .rvt-header-local {
+    padding-top: 0.5rem;
+  }
+  .rvt-header-local__inner {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .rvt-header-local__title {
+    font-size: 1.4375rem;
+    padding-right: 1.5rem;
+  }
+}
+
+.rvt-lockup {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'BentonSansCond', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-decoration: none;
+  color: #333333;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.rvt-lockup__title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-weight: 700;
+}
+
+.rvt-lockup__subtitle {
+  text-transform: uppercase;
+  line-height: 1.1;
+  font-size: 0.75rem;
+}
+
+.rvt-lockup__tab {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #990000;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 1.75rem;
+  height: 2.125rem;
+}
+
+.rvt-lockup__trident {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 1.1875rem;
+  height: 1.4375rem;
+}
+
+.rvt-lockup__body {
+  margin-left: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media screen and (min-width: 46.25em) {
+  .rvt-lockup__title {
+    font-size: 1.25rem;
+  }
+  .rvt-lockup__subtitle {
+    font-size: 0.875rem;
+  }
+  .rvt-lockup__tab {
+    width: 2.25rem;
+    height: 2.75rem;
+  }
+  .rvt-lockup__trident {
+    width: 1.5rem;
+    height: 1.875rem;
+  }
+  .rvt-lockup__body {
+    margin-left: 1rem;
+  }
+}
+
+.rvt-nav-menu {
+  position: relative;
+  background-color: #ffffff;
+  display: none;
+  margin-top: 1rem;
+  /**
+   * This makes the mobile menu flush to the sides of small screens. Use
+   * this code to make it break out of the rivet container on small screens.
+   */
+  left: -1.5rem;
+  width: calc(100% + 3rem);
+  /**
+   * This overrides the padding on the header wrapper when the
+   * mobile menu is open.
+   */
+  margin-bottom: -1rem;
+  /**
+   * Child menu toggle styles
+   */
+}
+
+.rvt-nav-menu__list {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.rvt-nav-menu__list[hidden] {
+  display: none;
+}
+
+.rvt-nav-menu__item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-top: 1px solid #eaeaea;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 0;
+  background-color: #fafafa;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.rvt-nav-menu__item--current {
+  -webkit-box-shadow: inset 0.5rem 0 0 0 #006298;
+          box-shadow: inset 0.5rem 0 0 0 #006298;
+}
+
+.rvt-nav-menu__item--more {
+  display: none;
+}
+
+.rvt-nav-menu__link {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 0.825rem 1.5rem;
+  font-size: 0.875rem;
+  text-decoration: none;
+  color: #333333;
+}
+
+.rvt-nav-menu__link:focus, .rvt-nav-menu__link:hover {
+  text-decoration: underline;
+  color: #006298;
+}
+
+.rvt-nav-menu__toggle {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: transparent;
+  border-left: 1px solid #dddddd;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.rvt-nav-menu__toggle svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.rvt-nav-menu__toggle:focus {
+  outline: 0.125rem solid #006298;
+  outline-offset: 0.125rem;
+}
+
+.rvt-nav-menu__toggle[aria-expanded="true"] svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.rvt-nav-menu__link:focus, .rvt-nav-menu__icon:focus {
+  z-index: 1;
+}
+
+.rvt-nav-menu__list--child-menu[aria-hidden="true"] {
+  display: none;
+}
+
+.rvt-nav-menu__list--child-menu .rvt-nav-menu__item {
+  background-color: #eeeeee;
+  border-color: #dddddd;
+  text-indent: 2rem;
+}
+
+@media screen and (min-width: 67.5em) {
+  .rvt-nav-menu {
+    display: block;
+    position: relative;
+    left: auto;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    /**
+     * Main child menu toggle styles
+     */
+    /**
+     * Styles for main global menu when it is behind a toggle
+     * on deeper section pages.
+     */
+    /**
+     * TODO: This duplicates a lot of styles from the
+     * normal main nav dropdown menus. Need to refactor this
+     * so that it can be used here and for all other child menus.
+     */
+  }
+  .rvt-nav-menu > .rvt-nav-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .rvt-nav-menu__item {
+    background-color: transparent;
+    border-top: none;
+    position: relative;
+    padding: 0;
+    margin-left: 0;
+  }
+  .rvt-nav-menu__item--current {
+    -webkit-box-shadow: 0 0.25rem 0 0 #006298;
+            box-shadow: 0 0.25rem 0 0 #006298;
+  }
+  .rvt-nav-menu > .rvt-nav-menu__list > .rvt-nav-menu__item:not(:first-child) {
+    margin-left: 0.825rem;
+  }
+  .rvt-nav-menu__item .rvt-nav-menu__link {
+    padding: 0;
+    text-indent: 0 !important;
+  }
+  .rvt-nav-menu__item--more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-left: 1px solid #dddddd;
+    padding-left: 1rem;
+  }
+  .rvt-nav-menu__list--child-menu {
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+    width: 16rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+    z-index: 999;
+  }
+  .rvt-nav-menu__list--child-right {
+    left: auto;
+    right: 0;
+  }
+  .rvt-nav-menu__list--child-menu .rvt-nav-menu__item {
+    background-color: transparent;
+  }
+  .rvt-nav-menu__list--child-menu .rvt-nav-menu__item a {
+    padding: 0.5rem 1rem;
+  }
+  .rvt-nav-menu__list--child-menu .rvt-nav-menu__item a:hover {
+    background-color: #006298;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .rvt-nav-menu__list--child-menu .rvt-nav-menu__link {
+    background-color: transparent;
+  }
+  .rvt-nav-menu__toggle {
+    padding: 0;
+    height: 1.2375rem;
+    width: 1.2375rem;
+    margin-left: 0.25rem;
+    border-radius: 999rem;
+    color: #333333;
+    border-left: none;
+  }
+  .rvt-nav-menu__toggle:hover {
+    background-color: #006298;
+    color: #ffffff;
+  }
+  .rvt-nav-menu__toggle svg {
+    width: 0.9rem;
+  }
+  .rvt-nav-menu__secondary-toggle {
+    background: none;
+    border: none;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 0.875rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+  .rvt-nav-menu__secondary-toggle:focus {
+    outline: 0.125rem solid #006298;
+    outline-offset: 0.125rem;
+  }
+  .rvt-nav-menu__secondary-toggle:hover {
+    background-color: #006298;
+    color: #ffffff;
+  }
+  .rvt-nav-menu__secondary-menu {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    width: 16rem;
+    margin: 0;
+    padding: 0.5rem 0;
+    -webkit-box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+            box-shadow: 0 1px 3px 2px rgba(0, 0, 0, 0.07);
+    background-color: #ffffff;
+    z-index: 999;
+  }
+  .rvt-nav-menu__secondary-menu[aria-hidden="true"] {
+    display: none;
+  }
+  .rvt-nav-menu__secondary-menu .rvt-nav-menu__item {
+    background-color: transparent;
+  }
+  .rvt-nav-menu__secondary-menu .rvt-nav-menu__item a {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+    display: block;
+    width: 100%;
+    color: #333333;
+  }
+  .rvt-nav-menu__secondary-menu .rvt-nav-menu__item a:hover {
+    background-color: #006298;
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .rvt-nav-menu__secondary-menu .rvt-nav-menu__link {
+    background-color: transparent;
+  }
+}
