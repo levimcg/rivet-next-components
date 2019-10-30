@@ -50,6 +50,13 @@
     right: $xl;
   }
 
+  &__menu-toggle:hover,
+  &__search-toggle:hover {
+    background-color: $color-blue;
+    border-color: $color-blue;
+    color: $color-white;
+  }
+
   &__search-toggle {
     margin-left: $xs;
     position: absolute;
@@ -111,7 +118,6 @@
     border-bottom: none;
 
     &__menu-toggle,
-    &__search-toggle,
     &__more-toggle {
       border: none;
       padding: 0;
@@ -123,6 +129,7 @@
       top: auto;
       right: auto;
       margin-left: $sm;
+      border-color: transparent;
     }
 
     &__inner {

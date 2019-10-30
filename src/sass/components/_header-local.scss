@@ -30,6 +30,12 @@
     }
   }
 
+  &__menu-toggle:hover {
+    background-color: $color-blue;
+    border-color: $color-blue;
+    color: $color-white;
+  }
+
   &__menu-toggle[aria-expanded="true"] {
     background-color: $color-blue;
     color: $color-white;
