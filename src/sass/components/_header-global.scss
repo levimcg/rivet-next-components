@@ -35,9 +35,12 @@
     height: $lg;
     border-radius: $xxs;
   }
-
-  &__menu-toggle span {
-    font-size: $ts-12;
+  
+  &__menu-toggle svg,
+  &__search-toggle svg,
+  &__more-toggle svg {
+    width: $sm * .9;
+    height: $sm * .9;
   }
 
   &__menu-toggle[aria-expanded="true"],
@@ -47,16 +50,13 @@
     border-color: $color-blue;
   }
 
-  &__menu-toggle svg,
-  &__search-toggle svg,
-  &__more-toggle svg {
-    width: $sm * .9;
-    height: $sm * .9;
-  }
-
   &__menu-toggle {
     position: absolute;
     right: $xl;
+  }
+
+  &__menu-toggle span {
+    font-size: $ts-12;
   }
 
   &__menu-toggle:hover,
@@ -128,6 +128,13 @@
     padding-top: $md;
     padding-bottom: $md;
 
+    &__inner {
+      display: flex;
+      align-items: center;
+      position: relative;
+      flex-wrap: wrap;
+    }
+
     &__menu-toggle,
     &__more-toggle {
       border: none;
@@ -141,13 +148,6 @@
       right: auto;
       margin-left: $sm;
       border-color: transparent;
-    }
-
-    &__inner {
-      display: flex;
-      align-items: center;
-      position: relative;
-      flex-wrap: wrap;
     }
 
     &__search-box {
