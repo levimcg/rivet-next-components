@@ -6,15 +6,17 @@
   <title>{{ title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/latest/rivet.min.css">
-  <link rel="stylesheet" href="./css/rivet-2-prototype-components.css">
+  <link rel="stylesheet" href="./css/rivet-next-components.css">
 </head>
 <body>
-  {{ layoutContent | safe }}
+  <main id="main-content">
+    {{ layoutContent | safe }}
+  </main>
   <script src="https://assets.uits.iu.edu/javascript/rivet/latest/rivet.min.js"></script>
-  <script src="./js/rivet-2-prototype-components.js"></script>
+  <script src="./js/rivet-next-components.js"></script>
   
   <script>
-    Rivet2Components.toggle();
+    RivetNext.toggle();
   </script>
 </body>
 </html>

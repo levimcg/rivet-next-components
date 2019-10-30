@@ -1,47 +1,70 @@
 <nav class="rvt-nav-menu" aria-label="Main menu" id="global-nav">
   <ul class="rvt-nav-menu__list">
-    {% for item in navigation.main %}
-      {% if item.text == "More" %}
+    {#
+      Main loop through global navigation (see _data/navigation.json)
+    #}
+    {%- for item in navigation.main -%}
+      {# Logic for the "More menu" that sets next to search #}
+      {%- if item.text == "More" -%}
       <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
+        {#
+          Using stock Rivet dropdowns here:
+          https://rivet.iu.edu/components/navigation/dropdown/
+        #}
         <button href="#" class="rvt-header-global__more-toggle" data-dropdown-toggle="more-menu">
-          {% include "icons/rvt-icon-ellipsis.svg" %}
+          {%- include "icons/rvt-icon-ellipsis.svg" -%}
           <span class="rvt-m-left-xs">{{ item.text }}</span>
         </button>
+        {# Using the --child-right modifier to right-align menus #}
         <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" id="more-menu" aria-hidden="true">
-          {% for sub in item.submenu %}
+          {%- for sub in item.submenu -%}
           <li class="rvt-nav-menu__item">
             <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
       </li>
-      {% for sub in item.submenu %}
+      {%- for sub in item.submenu -%}
       <li class="rvt-nav-menu__item rvt-hide-lg-up">
         <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
       </li>
-      {% endfor %}
-      
-      {% else %}
-      <li class="rvt-nav-menu__item">
-        <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
-        {% if item.submenu %}
+      {%- endfor -%}
+      {#
+        End "More" logic and continue rendering all the other regular menu
+        items and submenus.
+      #}
+      {%- else -%}
+      {#
+        The --current modifier adds a box shadow underline for the current page.
+        Also adding aria-current="page" for assistive technology via the same logic.
+      #}
+      <li class="rvt-nav-menu__item{% if item.current %} rvt-nav-menu__item--current{% endif %}">
+        <a href="{{ item.link }}" class="rvt-nav-menu__link"{%- if item.current -%} aria-current="page"{%- endif -%}>{{ item.text }}</a>
+        {%- if item.submenu -%}
+        {#
+          Using stock Rivet dropdowns here:
+          https://rivet.iu.edu/components/navigation/dropdown/
+        #}
         <button class="rvt-nav-menu__toggle" data-dropdown-toggle="global-toggle-{{ loop.index }}" aria-expanded="false">
-          {% include "icons/rvt-icon-chevron-down.svg" %}
+          {%- include "icons/rvt-icon-chevron-down.svg" -%}
         </button>
         <ul
           class="rvt-nav-menu__list rvt-nav-menu__list--child-menu {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}"
           id="global-toggle-{{ loop.index }}"
           aria-hidden="true"
         >
-          {% for sub in item.submenu %}
+          {%- for sub in item.submenu -%}
           <li class="rvt-nav-menu__item">
             <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
           </li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
-        {% endif %}
+        {# End submenu logic #}
+        {%- endif -%} 
       </li>
-      {% endif %}
-    {% endfor %}
+      {# End "More" Menu logic #}
+      {%- endif -%}
+      {# End main loop #}
+    {%- endfor -%}
   </ul>
 </nav>

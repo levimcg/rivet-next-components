@@ -33,6 +33,7 @@
     {
       "text": "Education",
       "link": "#",
+      "current": true,
       "submenu": [
         {
           "text": "MD Program",
@@ -139,7 +140,8 @@
     },
     {
       "text": "Clinical Care",
-      "link": "#"
+      "link": "#",
+      "current": true
     },
     {
       "text": "Careers",

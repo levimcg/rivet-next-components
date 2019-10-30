@@ -6,6 +6,18 @@
   border-top: $xxs solid $color-crimson;
   border-bottom: 1px solid $color-black--150;
 
+  &__skip-link {
+    position: fixed;
+    top: -6rem;
+    padding: $xs;
+    z-index: 999;
+
+    &:focus {
+      top: 0;
+      background-color: $color-white;
+    }
+  }
+
   &__inner {
     position: relative;
   }
@@ -16,7 +28,7 @@
   &__search-toggle,
   &__more-toggle {
     background: none;
-    border: 2px solid $color-black--200;
+    border: $xxs/2 solid $color-black--200;
     display: inline-flex;
     align-items: center;
     font-size: $ts-14;
@@ -26,10 +38,7 @@
 
   &__menu-toggle span {
     font-size: $ts-12;
-    font-weight: 700;
   }
-
-  /* Active state */
 
   &__menu-toggle[aria-expanded="true"],
   &__search-toggle[aria-expanded="true"] {
@@ -79,21 +88,21 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    background-color: #f7f7f7;
+    background-color: $color-white;
   }
 
   &__search-box {
     position: relative;
-    margin-top: 1rem;
+    margin-top: $sm;
     background-color: $color-black--050;
-    padding: 1rem 1.5rem ;
+    padding: $sm $md;
     border-top: 1px solid $color-black--150;
 
     /**
      * This makes the mobile menu flush to the sides of small screens. Use
      * this code to make it break out of the rivet container on small screens.
      */
-    left: -1.5rem; // Size of the Rivet .container padding.
+    left: -$md; // Size of the Rivet .container padding.
     width: calc(100% + 3rem);
 
     /**
@@ -116,6 +125,8 @@
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-global {
     border-bottom: none;
+    padding-top: $md;
+    padding-bottom: $md;
 
     &__menu-toggle,
     &__more-toggle {
@@ -136,6 +147,7 @@
       display: flex;
       align-items: center;
       position: relative;
+      flex-wrap: wrap;
     }
 
     &__search-box {
@@ -143,7 +155,6 @@
       top: $xl;
       left: auto;
       right: 0;
-      width: 360px;
       margin: 0;
       padding: $sm;
       box-shadow: $shadow-base;

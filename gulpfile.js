@@ -99,7 +99,7 @@ function lintSassBuild() {
 }
 
 /**
- * Uses Rollup to compile ES6 down to browser JS with a UMD wrapper.
+ * Uses Rollup to compile ES6 down to browser JS in an IIFE.
  * See more here:
  * https://rollupjs.org/guide/en#gulp
  */

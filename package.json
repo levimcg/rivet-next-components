@@ -1,5 +1,5 @@
 {
-  "name": "rivet-2-prototype-components",
+  "name": "rivet-next-components",
   "version": "0.0.1",
   "description": "Rivet 2 prototype components",
   "main": "dist/js/rivet-add-on-boilerplate.js",
@@ -9,7 +9,7 @@
     "clean": "rm -rf dist"
   },
   "author": "",
-  "addOnName": "Rivet2Components",
+  "addOnName": "RivetNext",
   "license": "BSD-3-Clause",
   "devDependencies": {
     "@11ty/eleventy": "^0.8.3",

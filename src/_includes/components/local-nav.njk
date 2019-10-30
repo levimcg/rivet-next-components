@@ -1,8 +1,8 @@
 <nav class="rvt-nav-menu" aria-label="Section menu" id="local-nav">
   <ul class="rvt-nav-menu__list">
     {% for item in navigation.local %}
-    <li class="rvt-nav-menu__item">
-      <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
+    <li class="rvt-nav-menu__item{% if item.current %} rvt-nav-menu__item--current{% endif %}">
+      <a href="{{ item.link }}" class="rvt-nav-menu__link"{% if item.current %} aria-current="page"{% endif %}>{{ item.text }}</a>
       {% if item.submenu %}
       <button
         class="rvt-nav-menu__toggle"

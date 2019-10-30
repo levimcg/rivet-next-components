@@ -1,28 +1,38 @@
 <div class="rvt-header-global">
+  <a class="rvt-header-global__skip-link" href="#main-content">Skip to main content</a>
+  <!-- Using a Rivet container here to match the max-width of the site -->
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <div class="rvt-header-global__inner">
-      {% include "components/lockup.njk" %}
+      <!--
+        Partial for main logo lockup "Inidiana University School of Medicine"
+      -->
+      {%- include "components/lockup.njk" -%}
       <button
         class="rvt-header-global__menu-toggle rvt-hide-lg-up"
         aria-expanded="false"
         data-toggle="global-nav"
       >
-        {% include "icons/rvt-icon-menu.svg" %}
+        {%- include "icons/rvt-icon-menu.svg" -%}
         <span class="rvt-m-left-xs">Menu</span>
       </button>
-
-      {% if sectionPage %}
-        {% include "components/global-nav-secondary.njk" %}
-      {% else %}
-        {% include "components/global-nav.njk" %}
-      {% endif %}
-
+      
+      <!--
+        This shows the alternate version of the nav where the top-level
+        navigation is behind a dropdown menu. E.g. on department, center,
+        campus pages, etc.
+      -->
+      {%- if sectionPage -%}
+        {%- include "components/global-nav-secondary.njk" -%}
+      {%- else -%}
+        {%- include "components/global-nav.njk" -%}
+      {%- endif -%}
+      
+      <!-- Start search toggle and pop-up -->
       <button class="rvt-header-global__search-toggle" data-toggle="search-box" aria-expanded="false">
-        {% include "icons/rvt-icon-magnifying-glass.svg" %}
+        {%- include "icons/rvt-icon-magnifying-glass.svg" -%}
         <span class="rvt-sr-only">Toggle Search Box</span>
       </button>
-      <!-- Search implmentation here -->
-      <div class="rvt-header-global__search-box" id="search-box" aria-hidden="true">
+      <div class="rvt-header-global__search-box rvt-width-xl-lg-up" id="search-box" aria-hidden="true">
         <form role="search">
             <label for="search" class="rvt-sr-only">Search</label>
             <div class="rvt-input-group">
@@ -33,6 +43,8 @@
             </div>
           </div>
         </form>
+      </div>
+
     </div><!-- end inner wrapper -->
   </div> <!-- main rvt-container -->
 </div> <!-- end global header -->

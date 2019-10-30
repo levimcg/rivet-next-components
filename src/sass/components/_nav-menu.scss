@@ -2,13 +2,13 @@
   position: relative;
   background-color: $color-white;
   display: none;
-  margin-top: 1rem;
+  margin-top: $sm;
 
   /**
    * This makes the mobile menu flush to the sides of small screens. Use
    * this code to make it break out of the rivet container on small screens.
    */
-  left: -1.5rem; // Size of the Rivet .container padding.
+  left: -$md; // Size of the Rivet .container padding.
   width: calc(100% + 3rem);
 
   /**
@@ -35,6 +35,11 @@
     flex-wrap: wrap;
     margin-top: 0; // resets Rivet default margin-top
     background-color: $color-black--050;
+    flex-shrink: 0;
+  }
+
+  &__item--current {
+    box-shadow: inset $xs 0 0 0 $color-blue;
   }
 
   &__item--more {
@@ -81,8 +86,8 @@
     }
 
     &:focus {
-      outline: .125rem solid $color-blue;
-      outline-offset: .125rem;
+      outline: $xxs/2 solid $color-blue;
+      outline-offset: $xxs/2;
     }
 
     &[aria-expanded="true"] {
@@ -98,17 +103,6 @@
       z-index: 1;
     }
   }
-
-  // TODO: Refactor this bit to make it less repetitive
-
-  // > .rvt-nav-menu__list > .rvt-nav-menu__item {
-  //   > .rvt-nav-menu__list > .rvt-nav-menu__item {
-  //     > .rvt-nav-menu__link {
-  //       text-indent: 40px;
-  //       background-color: $color-black--100;
-  //     }
-  //   }
-  // }
 
   &__list--child-menu[aria-hidden="true"] {
     display: none;
@@ -144,6 +138,10 @@
       margin-left: 0;
     }
 
+    &__item--current {
+      box-shadow: 0 $xxs 0 0 $color-blue;
+    }
+
     & > &__list > &__item:not(:first-child) {
       margin-left: $sm * .825;
     }
@@ -157,14 +155,14 @@
     &__item--more {
       display: flex;
       border-left: 1px solid $color-black--200;
-      padding-left: 1rem;
+      padding-left: $sm;
     }
 
     &__list--child-menu {
       position: absolute;
       top: $xl;
       left: 0;
-      width: 240px;
+      width: $width-md;
       margin: 0;
       padding: $xs 0;
       box-shadow: $shadow-base;
