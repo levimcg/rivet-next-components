@@ -8,41 +8,59 @@ function toggle() {
 
   function handleClick(event) {
     const toggleTrigger = event.target.closest('[data-toggle]');
+
     if (!toggleTrigger) {
-      if(currentElement) {
-        const currentToggle = document.querySelector(`[data-toggle="${currentElement.id}"]`);
-        hideElement(currentToggle, currentElement);
-        return;
+      /**
+       * If there is a visible element and the click didn't happen inside
+       * the visible element, hide the visible element, e.g. when the
+       * user clicks away from either the toggle or the visible element.
+       */
+      if (currentElement && !event.target.closest('#' + currentElement)) {
+        hideElement(currentElement);
       }
+      // Other wise bail out and don't run the rest of the script.
       return;
     }
     
-    const toggleId = toggleTrigger.dataset.toggle;
-    const elementToToggle = document.getElementById(toggleId);
-    // If the click happened inside the toggled element, bail.
-    if (event.target.closest('#' + toggleId)) return;
-    
+    /**
+     * Now we know the click was on a toggle. If the click wasn't on
+     * the currently visible toggle e.g. it was on another toggle,
+     * hide the currently visible element.
+     */
+    if(currentElement && toggleTrigger.dataset.toggle !== currentElement) {
+      hideElement(currentElement);
+    }
+
     const isExpanded = toggleTrigger.getAttribute('aria-expanded');
+    const toggleId = toggleTrigger.dataset.toggle;
     
     isExpanded == 'false' ?
-      showElement(toggleTrigger, elementToToggle) :
-      hideElement(toggleTrigger, elementToToggle);
+      showElement(toggleId) :
+      hideElement(toggleId);
   }
   
-  function showElement(trigger, element) {
-    trigger.setAttribute('aria-expanded', 'true');
-    element.classList.add('rvt-display-block');
-    currentElement = element;
-    console.log(currentElement);
+  function showElement(id) {
+    const showTrigger = document.querySelector(
+      `[data-toggle="${id}"]`
+    );
+    const showElement = document.getElementById(id);
+
+    showTrigger.setAttribute('aria-expanded', 'true');
+    showElement.classList.add('rvt-display-block');
+    currentElement = id;
+    console.log(id);
   }
   
-  function hideElement(trigger, element) {
-    trigger.setAttribute('aria-expanded', 'false');
-    element.classList.remove('rvt-display-block');
+  function hideElement(id) {
+    const hideTrigger = document.querySelector(`[data-toggle="${id}"]`);
+    const hideElement = document.getElementById(id);
+
+    hideTrigger.setAttribute('aria-expanded', 'false');
+    hideElement.classList.remove('rvt-display-block');
     currentElement = null;
   }
-  
-  document.addEventListener('click', handleClick, false)
+
+  document.addEventListener('click', handleClick, false);
 }
 
 export default { init, toggle };

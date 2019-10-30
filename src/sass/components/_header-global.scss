@@ -31,7 +31,8 @@
 
   /* Active state */
 
-  &__menu-toggle[aria-expanded="true"] {
+  &__menu-toggle[aria-expanded="true"],
+  &__search-toggle[aria-expanded="true"] {
     background-color: $color-blue;
     color: $color-white;
     border-color: $color-blue;
