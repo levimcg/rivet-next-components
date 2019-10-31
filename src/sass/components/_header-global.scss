@@ -31,9 +31,11 @@
     border: $xxs/2 solid $color-black--200;
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     font-size: $ts-14;
     height: $lg;
     border-radius: $xxs;
+    padding: 0;
 
     &:focus {
       outline: $xxs/2 solid $color-blue;
@@ -57,11 +59,22 @@
 
   &__menu-toggle {
     position: absolute;
-    right: $xl;
+    right: $xl * 1.25;
+    width: $xl;
+    height: $lg;
   }
-
-  &__menu-toggle span {
+  
+   &__menu-toggle span {
     font-size: $ts-12;
+    display: none;
+  }
+  
+  &__search-toggle {
+    position: absolute;
+    width: $xl;
+    height: $lg;
+    right: 0;
+    top: 0;
   }
 
   &__menu-toggle:hover,
@@ -70,13 +83,6 @@
     background-color: $color-blue;
     border-color: $color-blue;
     color: $color-white;
-  }
-
-  &__search-toggle {
-    margin-left: $xs;
-    position: absolute;
-    right: 0;
-    top: 0;
   }
 
   &__menu-list {
@@ -128,6 +134,19 @@
   }
 }
 
+@media screen and (min-width: $breakpoint-sm) {
+  .#{$prefix}-header-global {
+    &__menu-toggle {
+      width: auto;
+      padding: 0 $xs;
+    }
+    
+    &__menu-toggle span {
+      display: inline-block;
+    }
+  }
+}
+
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-global {
     border-bottom: none;
@@ -144,6 +163,8 @@
     &__more-toggle {
       border: none;
       font-size: $ts-14;
+      padding-right: $xs;
+      padding-left: $xs;
     }
 
     &__search-toggle {

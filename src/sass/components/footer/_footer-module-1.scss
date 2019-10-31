@@ -1,11 +1,29 @@
 .#{$prefix}-footer-module-1 {
+  .rvt-container {
+    padding: 0;
+  }
+
   &__info {
     background-color: $color-black--50;
   }
   
   &__contact {
+    align-items: center;
     background-color: $color-crimson;
     color: $color-white;
+    display: flex;
+    position: relative;
+    
+    a {
+      color: $color-white;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    
+    a:hover,
+    a:focus{
+      text-decoration: underline;
+    }
   }
   
   &__info,
@@ -25,25 +43,40 @@
     display: block;
     font-weight: bold;
   }
+  
+  &__envelope {
+    margin-right: $sm;
+  }
 }
 
-@media only screen and (min-width: 78.75em) {
+@media only screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-footer-module-1 {
-    align-items: center;
-    background-color: $color-crimson; // hack to get the right flex item to have full-height crimson
-    display: flex;
-    justify-content: space-between;
+    position: relative;
+
+    &:before {
+      background-color: $color-black--50;
+      content: '';
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 60%;
+      z-index: -1;
+    }
+    
+    &:after {
+      background-color: $color-crimson;
+      content: '';
+      height: 100%;
+      right: 0;
+      position: absolute;
+      top: 0;
+      width: 40%;
+      z-index: -2;
+    }
     
     &__info {
-      flex-basis: 60%;
-    }
-    
-    &__contact {
-      flex-grow: 1;
-    }
-    
-    &__marker {
-      vertical-align: text-top;
+      position: relative;
     }
     
     &__inline-field {
@@ -64,6 +97,10 @@
     &__address,
     &__address + &__inline-field {
       display: inline-block;
+    }
+    
+    &__marker {
+      vertical-align: text-top;
     }
   }
 }
