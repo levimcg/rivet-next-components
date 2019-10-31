@@ -1,0 +1,69 @@
+.#{$prefix}-footer-module-1 {
+  &__info {
+    background-color: $color-black--50;
+  }
+  
+  &__contact {
+    background-color: $color-crimson;
+    color: $color-white;
+  }
+  
+  &__info,
+  &__contact {
+    padding: $xl;
+  }
+  
+  &__address {
+    font-style: normal;
+  }
+  
+  &__inline-field {
+    display: block;
+  }
+  
+  &__inline-field--emphasis {
+    display: block;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 78.75em) {
+  .#{$prefix}-footer-module-1 {
+    align-items: center;
+    background-color: $color-crimson; // hack to get the right flex item to have full-height crimson
+    display: flex;
+    justify-content: space-between;
+    
+    &__info {
+      flex-basis: 60%;
+    }
+    
+    &__contact {
+      flex-grow: 1;
+    }
+    
+    &__marker {
+      vertical-align: text-top;
+    }
+    
+    &__inline-field {
+      display: inline-block;
+      line-height: 1.2;
+      padding: 0 $xs;
+      
+      &:first-child {
+        padding-left: 0;
+      }
+    }
+
+    &__inline-field + &__inline-field,
+    &__address + &__inline-field {
+      border-left: 2px solid $color-black;
+    }
+    
+    &__address,
+    &__address + &__inline-field {
+      display: inline-block;
+    }
+  }
+}

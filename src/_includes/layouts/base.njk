@@ -9,12 +9,16 @@
   <link rel="stylesheet" href="./css/rivet-next-components.css">
 </head>
 <body>
-  <main id="main-content">
+  {% include "components/global-header.njk" %}
+  {% if sectionPage %}
+  {% include "components/local-header.njk" %}
+  {% endif %}
+  <main id="main-content" class="rvt-p-tb-xxl">
     {{ layoutContent | safe }}
   </main>
+  {% include "components/footer/footer.njk" %}
   <script src="https://assets.uits.iu.edu/javascript/rivet/latest/rivet.min.js"></script>
   <script src="./js/rivet-next-components.js"></script>
-  
   <script>
     RivetNext.toggle();
   </script>
