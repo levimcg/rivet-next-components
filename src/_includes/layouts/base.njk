@@ -23,7 +23,7 @@
           <a href="./">Top-level global navigation example</a>
         </li>
         <li>
-          <a href="./local-property.html">Local property navigation exapmple</a>
+          <a href="./local-property.html">Local property navigation example</a>
         </li>
       </ul>
     </div>
@@ -37,15 +37,15 @@
   <script>
     RivetNext.toggle.init();
     
-    document.addEventListener('rvt:toggleHide', event => {
-      let preventEvent = false;
+    document.addEventListener('rvt:toggleHide', function(event) {
+      var preventEvent = false;
       if (!preventEvent) {
         console.log(event.detail.elementId)
       } else {
         event.preventDefault();
         console.log('nope, cancelled')
       }
-    })
+    });
   </script>
 </body>
 </html>
