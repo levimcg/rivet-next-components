@@ -5,9 +5,9 @@
 // Rivet 1.x.x does not include Benton Sans Condensed. Including it here.
 @import "./misc/fonts";
 // Start new components not part of Rivet 1.x.x
-@import "./components/header-global";
-@import "./components/header-local";
-@import "./components/lockup";
-@import "./components/nav-menu";
+@import "./components/header/header-global";
+@import "./components/header/header-local";
+@import "./components/header/lockup";
+@import "./components/header/nav-menu";
 @import "./components/footer/footer-module-1";
 @import "./components/footer/footer-module-2";

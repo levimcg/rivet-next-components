@@ -63,12 +63,12 @@
     width: $xl;
     height: $lg;
   }
-  
-   &__menu-toggle span {
+
+  &__menu-toggle span {
     font-size: $ts-12;
     display: none;
   }
-  
+
   &__search-toggle {
     position: absolute;
     width: $xl;
@@ -140,7 +140,7 @@
       width: auto;
       padding: 0 $xs;
     }
-    
+
     &__menu-toggle span {
       display: inline-block;
     }

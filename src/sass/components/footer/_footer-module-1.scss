@@ -9,15 +9,15 @@
     color: $color-white;
     display: flex;
     position: relative;
-    
+
     a {
       color: $color-white;
       font-weight: bold;
       text-decoration: none;
     }
-    
+
     a:hover,
-    a:focus{
+    a:focus {
       text-decoration: underline;
     }
   }
@@ -29,20 +29,20 @@
     width: calc(100% + 3rem);
     padding: $lg $md;
   }
-  
+
   &__address {
     font-style: normal;
   }
-  
+
   &__inline-field {
     display: block;
   }
-  
+
   &__inline-field--emphasis {
     display: block;
     font-weight: bold;
   }
-  
+
   &__envelope {
     margin-right: $sm;
   }
@@ -52,7 +52,7 @@
   .#{$prefix}-footer-module-1 {
     position: relative;
 
-    &:before {
+    &::before {
       background-color: $color-black--50;
       content: '';
       height: 100%;
@@ -62,8 +62,8 @@
       width: 60%;
       z-index: -1;
     }
-    
-    &:after {
+
+    &::after {
       background-color: $color-crimson;
       content: '';
       height: 100%;
@@ -73,27 +73,27 @@
       width: 40%;
       z-index: -2;
     }
-    
+
     &__info {
       position: relative;
     }
-    
+
     &__info,
     &__contact {
       left: auto;
       width: auto;
       padding-left: 0;
     }
-    
+
     &__contact {
       padding-left: $md;
     }
-    
+
     &__inline-field {
       display: inline-block;
       line-height: 1.2;
       padding: 0 $xs;
-      
+
       &:first-child {
         padding-left: 0;
       }
@@ -103,12 +103,12 @@
     &__address + &__inline-field {
       border-left: 2px solid $color-black;
     }
-    
+
     &__address,
     &__address + &__inline-field {
       display: inline-block;
     }
-    
+
     &__marker {
       vertical-align: text-top;
     }
