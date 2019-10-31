@@ -1,12 +1,8 @@
 .#{$prefix}-footer-module-1 {
-  .rvt-container {
-    padding: 0;
-  }
-
   &__info {
     background-color: $color-black--50;
   }
-  
+
   &__contact {
     align-items: center;
     background-color: $color-crimson;
@@ -25,10 +21,13 @@
       text-decoration: underline;
     }
   }
-  
+
   &__info,
   &__contact {
-    padding: $xl;
+    position: relative;
+    left: -$md;
+    width: calc(100% + 3rem);
+    padding: $lg $md;
   }
   
   &__address {
@@ -77,6 +76,17 @@
     
     &__info {
       position: relative;
+    }
+    
+    &__info,
+    &__contact {
+      left: auto;
+      width: auto;
+      padding-left: 0;
+    }
+    
+    &__contact {
+      padding-left: $md;
     }
     
     &__inline-field {
