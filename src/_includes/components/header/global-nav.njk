@@ -35,7 +35,13 @@
       </li>
       {%- endfor -%}
       
-      {# logic for departments menu #}
+      {#
+        logic for departments menu. Departments is a definite outlier
+        because it has SO many second-level items in the submenu/dropdown.
+        I've created a modified __list-child-menu here that is wider and
+        split into two columns with headings to accomodate "Basic Science"
+        and "Clinical Science"
+      #}
       {%- elif item.text == "Departments" -%}
       
       <li class="rvt-nav-menu__item{% if item.current %} rvt-nav-menu__item--current{% endif %}">
@@ -53,6 +59,10 @@
         >
           {%- include "icons/rvt-icon-chevron-down.svg" -%}
         </button>
+        {#
+          These "mega" modifiers are used as hooks for the one-off,
+          two-column display of a child menu.
+        #}
         <ul
           class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-menu-mega {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}"
           id="global-toggle-{{ loop.index }}"
