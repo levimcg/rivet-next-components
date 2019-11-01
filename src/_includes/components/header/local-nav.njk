@@ -1,4 +1,8 @@
 <nav class="rvt-nav-menu" aria-label="Section menu" id="local-nav">
+  {#
+    This "local nav" works basically the same way as the "global-nav.njk"
+    partial just a lot less logic.
+  #}
   <ul class="rvt-nav-menu__list">
     {% for item in navigation.local %}
     <li class="rvt-nav-menu__item{% if item.current %} rvt-nav-menu__item--current{% endif %}">

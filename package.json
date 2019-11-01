@@ -1,7 +1,7 @@
 {
   "name": "rivet-next-components",
   "version": "0.0.1",
-  "description": "Rivet 2 prototype components",
+  "description": "Rivet 2 prototype components - not official",
   "main": "dist/js/rivet-add-on-boilerplate.js",
   "scripts": {
     "start": "npx gulp buildDocs && npx gulp",
