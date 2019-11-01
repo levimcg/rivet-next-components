@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx gulp buildDocs && npx gulp",
     "build": "npm run clean && npx gulp release",
-    "clean": "rm -rf dist"
+    "clean": "rm -rf dist",
+    "deploy": "gh-pages -d docs"
   },
   "author": "",
   "addOnName": "RivetNext",
