@@ -70,7 +70,31 @@
       "link": "#",
       "submenu": [
         {
-          "text": "MD Program",
+          "text": "Centers and Institutes",
+          "link": "#"
+        },
+        {
+          "text": "Department Programs",
+          "link": "#"
+        },
+        {
+          "text": "Clinical Research",
+          "link": "#"
+        },
+        {
+          "text": "Faculty Labs",
+          "link": "#"
+        },
+        {
+          "text": "Training Programs",
+          "link": "#"
+        },
+        {
+          "text": "Investigator Support",
+          "link": "#"
+        },
+        {
+          "text": "Service Cores",
           "link": "#"
         }
       ]
@@ -80,14 +104,151 @@
       "link": "#",
       "submenu": [
         {
+          "text": "Bloomington",
+          "link": "#"
+        },
+        {
+          "text": "Evansville",
+          "link": "#"
+        },
+        {
+          "text": "Fort Wayne",
+          "link": "#"
+        },
+        {
           "text": "Indianapolis",
+          "link": "#"
+        },
+        {
+          "text": "Muncie",
+          "link": "#"
+        },
+        {
+          "text": "Northwest – Gary",
+          "link": "#"
+        },
+        {
+          "text": "South Bend",
+          "link": "#"
+        },
+        {
+          "text": "Terre Haute",
+          "link": "#"
+        },
+        {
+          "text": "West Lafayette",
           "link": "#"
         }
       ]
     },
     {
       "text": "Departments",
-      "link": "#"
+      "link": "#",
+      "rightAlign": true,
+      "submenu": [
+        {
+          "text": "Basic Science",
+          "items": [
+            {
+              "text": "Anatomy and Cell Biology",
+              "link": "#"
+            },
+            {
+              "text": "Biochemistry and Molecular Biology",
+              "link": "#"
+            }
+          ]
+        },
+        {
+          "text": "Clinical Science",
+          "items": [
+            {
+              "text": "Anesthesia",
+              "link": "#"
+            },
+            {
+              "text": "Dermatology",
+              "link": "#"
+            },
+            {
+              "text": "Emergency Medicine",
+              "link": "#"
+            },
+            {
+              "text": "Family Medicine",
+              "link": "#"
+            },
+            {
+              "text": "Medical and Molecular Genetics",
+              "link": "#"
+            },
+            {
+              "text": "Medicine",
+              "link": "#"
+            },
+            {
+              "text": "Neurological Surgery",
+              "link": "#"
+            },
+            {
+              "text": "Neurology",
+              "link": "#"
+            },
+            {
+              "text": "Obstetrics and Gynecology",
+              "link": "#"
+            },
+            {
+              "text": "Neurology",
+              "link": "#"
+            },
+            {
+              "text": "Ophthalmology",
+              "link": "#"
+            },
+            {
+              "text": "Pathology and Laboratory Medicine",
+              "link": "#"
+            },
+            {
+              "text": "Orthopaedic Surgery",
+              "link": "#"
+            },
+            {
+              "text": "Otolaryngology",
+              "link": "#"
+            },
+            {
+              "text": "Pediatrics",
+              "link": "#"
+            },
+            {
+              "text": "Physical Medicine and Rehabilitation",
+              "link": "#"
+            },
+            {
+              "text": "Psychiatry",
+              "link": "#"
+            },
+            {
+              "text": "Radiology and Imaging Sciences",
+              "link": "#"
+            },
+            {
+              "text": "Radiation Oncology",
+              "link": "#"
+            },
+            {
+              "text": "Surgery",
+              "link": "#"
+            },
+            {
+              "text": "Urology",
+              "link": "#"
+            }
+          ]
+        }
+      ]
     },
     {
       "text": "News",
@@ -96,6 +257,18 @@
       "submenu": [
         {
           "text": "News Releases",
+          "link": "#"
+        },
+        {
+          "text": "Communications",
+          "link": "#"
+        },
+        {
+          "text": "Blogs",
+          "link": "#"
+        },
+        {
+          "text": "Events",
           "link": "#"
         }
       ]

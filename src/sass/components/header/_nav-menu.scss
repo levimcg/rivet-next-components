@@ -113,6 +113,17 @@
     border-color: $color-black--200;
     text-indent: $lg;
   }
+
+  &__item--mega {
+    border-top: none;
+  }
+
+  &__heading {
+    display: none;
+    font-size: $ts-14;
+    font-weight: 700;
+    padding: $sm $md;
+  }
 }
 
 @media screen and (min-width: $breakpoint-lg) {
@@ -170,6 +181,60 @@
       z-index: 999;
     }
 
+    &__heading {
+      font-weight: 700;
+      display: block;
+      padding-left: $sm;
+      padding-top: $sm;
+      padding-bottom: 0;
+      text-indent: 0;
+      width: 100%;
+    }
+
+    /**
+     * This is a two column dropdown menu used for the Departments
+     * menu in the main nav.
+     */
+
+    &__list--child-menu-mega {
+      width: $width-xxl * 1.5;
+      display: flex;
+      padding: 0;
+    }
+
+    &__list--child-menu-mega > &__item--mega {
+      display: block;
+      flex-shrink: 1;
+    }
+
+    &__list--child-menu-mega > &__item--mega &__link--mega {
+      padding: $xxs $sm;
+      margin-top: $xxs*1.125;
+    }
+
+    &__list--child-menu-mega &__item--mega:first-child {
+      width: 33%;
+      flex-basis: 33%;
+      padding-right: $sm;
+      border-right: 1px solid $color-black--150;
+    }
+
+    &__list--child-menu-mega &__item--mega:last-child {
+      flex-grow: 1;
+    }
+
+    &__list--child-menu-mega &__item--mega:last-child > &__list {
+      columns: 2;
+    }
+
+    &__item--mega > &__list--child-menu {
+      position: relative;
+      box-shadow: none;
+      top: 0;
+      left: auto;
+      width: auto;
+    }
+
     &__list--child-right {
       left: auto;
       right: 0;
@@ -181,6 +246,9 @@
 
     &__list--child-menu &__item a {
       padding: $xs $sm;
+      text-decoration: none;
+      color: $color-black;
+      display: block;
     }
 
     &__list--child-menu &__item a:hover {

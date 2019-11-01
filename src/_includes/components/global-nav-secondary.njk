@@ -24,6 +24,45 @@
           <a href="{{ sub.link }}" class="rvt-nav-menu__link">{{ sub.text }}</a>
         </li>
         {% endfor %}
+        
+      {# logic for departments menu #}
+      {%- elif item.text == "Departments" -%}
+      
+      <li class="rvt-nav-menu__item{% if item.current %} rvt-nav-menu__item--current{% endif %}">
+        <a href="{{ item.link }}" class="rvt-nav-menu__link"{%- if item.current -%} aria-current="page"{%- endif -%}>{{ item.text }}</a>
+        {%- if item.submenu -%}
+        {#
+          Using stock Rivet dropdowns here:
+          https://rivet.iu.edu/components/navigation/dropdown/
+        #}
+        <button class="rvt-nav-menu__toggle" data-dropdown-toggle="global-toggle-{{ loop.index }}" aria-expanded="false">
+          {%- include "icons/rvt-icon-chevron-down.svg" -%}
+        </button>
+        <ul
+          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-menu-mega {% if item.rightAlign %} rvt-nav-menu__list--child-right{% endif %}"
+          id="global-toggle-{{ loop.index }}"
+          aria-hidden="true"
+        >
+          {%- for sub in item.submenu -%}
+          <li class="rvt-nav-menu__item rvt-nav-menu__item--mega">
+            <div class="rvt-nav-menu__heading">{{ sub.text }}</div>
+            <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu">
+              {%- for i in sub.items -%}
+              <li class="rvt-nav-menu__item">
+                <a href="{{ i.link }}" class="rvt-nav-menu__link rvt-nav-menu__link--mega">{{ i.text }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </li>
+          {%- endfor -%}
+        </ul>
+        {# End submenu logic #}
+        {%- endif -%} 
+      </li>
+      {#
+        End "Departments" logic and continue rendering all the other regular menu
+        items and submenus.
+      #}
       {% else %}
         <li class="rvt-nav-menu__item">
           <a href="{{ item.link }}" class="rvt-nav-menu__link">{{ item.text }}</a>
