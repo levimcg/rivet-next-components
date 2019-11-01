@@ -11,7 +11,12 @@
           Using stock Rivet dropdowns here:
           https://rivet.iu.edu/components/navigation/dropdown/
         #}
-        <button href="#" class="rvt-header-global__more-toggle" data-dropdown-toggle="more-menu">
+        <button
+          class="rvt-header-global__more-toggle"
+          data-dropdown-toggle="more-menu"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
           {%- include "icons/rvt-icon-ellipsis.svg" -%}
           <span class="rvt-m-left-xs">{{ item.text }}</span>
         </button>
@@ -40,7 +45,12 @@
           Using stock Rivet dropdowns here:
           https://rivet.iu.edu/components/navigation/dropdown/
         #}
-        <button class="rvt-nav-menu__toggle" data-dropdown-toggle="global-toggle-{{ loop.index }}" aria-expanded="false">
+        <button
+          class="rvt-nav-menu__toggle"
+          data-dropdown-toggle="global-toggle-{{ loop.index }}"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
           {%- include "icons/rvt-icon-chevron-down.svg" -%}
         </button>
         <ul
@@ -80,7 +90,12 @@
           Using stock Rivet dropdowns here:
           https://rivet.iu.edu/components/navigation/dropdown/
         #}
-        <button class="rvt-nav-menu__toggle" data-dropdown-toggle="global-toggle-{{ loop.index }}" aria-expanded="false">
+        <button
+          class="rvt-nav-menu__toggle"
+          data-dropdown-toggle="global-toggle-{{ loop.index }}"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
           {%- include "icons/rvt-icon-chevron-down.svg" -%}
         </button>
         <ul
