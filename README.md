@@ -18,6 +18,8 @@ Included is a live demo hosted on Github Pages for reference:
 ## Working with source file
 To work with these source files make sure you have node.js and npm install on your local computer.
 
+**Requires npm v5.2+**
+
 ```bash
 node --version && npm --version
 ```
