@@ -4,8 +4,8 @@
  * any reason, uncomment the two lines below and rebuild file.
  */
 
-import './polyfills/closest';
-import './polyfills/CustomEvent.js';
+// import './polyfills/closest';
+// import './polyfills/CustomEvent.js';
 import toggle from './components/toggle';
 
 export default { toggle };
