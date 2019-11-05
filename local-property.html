@@ -29,8 +29,9 @@
   </div>
 </a><button
         class="rvt-header-global__menu-toggle rvt-hide-lg-up"
-        aria-expanded="false"
         data-toggle="global-nav"
+        aria-expanded="false"
+        aria-haspopup="true"
       ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
   <g fill="currentColor">
     <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
@@ -488,7 +489,12 @@
   
   </ul>
 </nav><!-- Start search toggle and pop-up -->
-      <button class="rvt-header-global__search-toggle" data-toggle="search-box" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      <button
+        class="rvt-header-global__search-toggle"
+        data-toggle="search-box"
+        aria-expanded="false"
+        aria-haspopup="true"
+      ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M15.71,14.29,10.89,9.47a6,6,0,1,0-1.42,1.42l4.82,4.82a1,1,0,0,0,1.42,0A1,1,0,0,0,15.71,14.29ZM6,10a4,4,0,1,1,4-4A4,4,0,0,1,6,10Z"/>
 </svg><span class="rvt-sr-only">Toggle Search Box</span>
       </button>
@@ -519,6 +525,7 @@
         class="rvt-header-local__menu-toggle rvt-hide-lg-up"
         data-toggle="local-nav"
         aria-expanded="false"
+        aria-haspopup="true"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
@@ -526,6 +533,7 @@
         <span class="rvt-sr-only">Toggle Menu</span>
       </button>
       <nav class="rvt-nav-menu" aria-label="Section menu" id="local-nav">
+  
   <ul class="rvt-nav-menu__list">
     
     <li class="rvt-nav-menu__item">
@@ -535,6 +543,7 @@
         class="rvt-nav-menu__toggle"
         data-dropdown-toggle="local-toggle-1"
         aria-expanded="false"
+        aria-haspopup="true"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
@@ -710,6 +719,11 @@
     </div>
   </div><!-- end container -->
 </div>
+<!--
+  This is a modified version of the current Rivet footer. It adds a
+  Rivet container that constrains the max-width to match the rest of the
+  site. E.g. "rvt-container--junior".
+-->
 <div class="rvt-footer rvt-display-block">
   <div class="rvt-container rvt-container--center rvt-container--junior">
   <div class="rvt-flex-md-up rvt-items-center-md-up">
