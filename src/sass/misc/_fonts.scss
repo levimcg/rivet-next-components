@@ -1,12 +1,21 @@
 @font-face {
-  font-family: 'BentonSansCondRegular';
-  src: url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot');
-  /* stylelint-disable */
-  src: url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix') format('embedded-opentype'),
-        url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff') format('woff'),
-        url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf') format('truetype'),
-        url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular') format('svg');
-  /* stylelint-enable */
-  font-style: normal;
-  font-weight: normal;
+    font-family: 'BentonSansCond';
+    src: url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot');
+    src: url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.eot?#iefix') format('embedded-opentype'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.woff') format('woff'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.ttf') format('truetype'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-regular.svg#BentonSansCondRegular') format('svg');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'BentonSansCond';
+    src: url('https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot');
+    src: url('https://fonts.iu.edu/fonts/benton-sans-cond-bold.eot?#iefix') format('embedded-opentype'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-bold.woff') format('woff'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-bold.ttf') format('truetype'),
+         url('https://fonts.iu.edu/fonts/benton-sans-cond-bold.svg#BentonSansCondBold') format('svg');
+    font-style: normal;
+    font-weight: 700;
 }
