@@ -7,5 +7,6 @@
 // import './polyfills/closest';
 // import './polyfills/CustomEvent.js';
 import toggle from './components/toggle';
+import sidenav from './components/sidenav';
 
-export default { toggle };
+export default { toggle, sidenav };

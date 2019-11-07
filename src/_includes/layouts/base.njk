@@ -16,16 +16,27 @@
     {% endif %}
   </header>
   <main id="main-content">
-    <div class="rvt-container rvt-container--center rvt-container--junior">
-      <h1 class="rvt-text-bold rvt-ts-23 rvt-m-top-xxl">Contents</h1>
-      <ul>
-        <li>
-          <a href="./">Top-level global navigation example</a>
-        </li>
-        <li>
-          <a href="./local-property.html">Local property navigation example</a>
-        </li>
-      </ul>
+    <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-top-xxl">
+      <div class="rvt-grid">
+        <div class="rvt-grid__item-8-md-up rvt-grid__item-push-4-md rvt-m-bottom-xxl">
+          <h1 class="rvt-text-bold rvt-ts-32 rvt-lh-title">Contents</h1>
+          <ul>
+            <li>
+              <a href="./">Top-level global navigation example</a>
+            </li>
+            <li>
+              <a href="./local-property.html">Local property navigation example</a>
+            </li>
+          </ul>
+        </div>
+        <div class="rvt-grid__item-3-md-up rvt-grid__item-pull-8-md">
+          <h2 class="rvt-hide-md-up rvt-m-bottom-lg">
+            <span class="rvt-display-block rvt-text-uppercase rvt-ts-12">More in</span>
+            <span class="rvt-display-block rvt-ts-16 rvt-text-bold">Local property title</span>
+          </h2>
+          {% include "components/sidenav.njk" %}
+        </div>
+      </div>
     </div>
     {{ layoutContent | safe }}
   </main>
@@ -36,6 +47,7 @@
   <script src="./js/rivet-next-components.js"></script>
   <script>
     RivetNext.toggle.init();
+    RivetNext.sidenav.init();
     
     document.addEventListener('rvt:toggleHide', function(event) {
       var preventEvent = false;
