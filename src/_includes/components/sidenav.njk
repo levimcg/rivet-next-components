@@ -1,0 +1,87 @@
+<nav class="rvt-sidenav" aria-label="Sidebar navigation" data-sidenav>
+  <ul class="rvt-sidenav__list" data-sidenav-list>
+    <li class="rvt-sidenav__item">
+      <a href="#" class="rvt-sidenav__link">Section nav one</a>
+    </li>
+    <li class="rvt-sidenav__item">
+      <a href="#" class="rvt-sidenav__link" aria-current="page">Section nav two</a>
+      <button href="#" class="rvt-sidenav__icon" data-sidenav-toggle="toggle-1">
+        {% include "icons/rvt-icon-chevron-down.svg" %}
+      </button>
+      <ul class="rvt-sidenav__list" id="toggle-1" role="menu">
+        <li class="rvt-sidenav__item">
+          <a href="#" class="rvt-sidenav__link">Level two</a>
+          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-2">
+            {% include "icons/rvt-icon-chevron-down.svg" %}
+          </button>
+          <ul class="rvt-sidenav__list" id="toggle-2" role="menu">
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li>
+          </ul>
+        </li>
+        <li class="rvt-sidenav__item">
+          <a href="#" class="rvt-sidenav__link">
+            <span>Level two</span>
+          </a>
+          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-3">
+            {% include "icons/rvt-icon-chevron-down.svg" %}
+          </button>
+          <ul class="rvt-sidenav__list" id="toggle-3" role="menu">
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">Level three</a>
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li>
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li>
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li>
+          </ul>
+        </li>
+        <li class="rvt-sidenav__item">
+          <a href="#" class="rvt-sidenav__link">Level two</a>
+        </li>
+        <li class="rvt-sidenav__item">
+          <a href="#" class="rvt-sidenav__link">
+            <span>Level two</span>
+          </a>
+          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-4">
+            {% include "icons/rvt-icon-chevron-down.svg" %}
+          </button>
+          <ul class="rvt-sidenav__list" id="toggle-4" role="menu">
+            <li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link">
+                <span>Level three</span>
+              </a>
+              <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-5">
+                {% include "icons/rvt-icon-chevron-down.svg" %}
+              </button>
+              <ul class="rvt-sidenav__list" id="toggle-5" role="menu">
+                <li class="rvt-sidenav__item">
+                  <a href="#" class="rvt-sidenav__link">Level four</a>
+                </li>
+                <li class="rvt-sidenav__item">
+                  <a href="#" class="rvt-sidenav__link">
+                    <span>Level four</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li class="rvt-sidenav__item">
+          <a href="#" class="rvt-sidenav__link">Level two</a>
+        </li>
+      </ul>
+    </li>
+    <li class="rvt-sidenav__item">
+      <a href="#" class="rvt-sidenav__link">Section nav three</a>
+    </li>
+    <li class="rvt-sidenav__item">
+      <a href="#" class="rvt-sidenav__link">Section nav four</a>
+    </li>
+  </ul>
+</nav>
