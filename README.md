@@ -11,7 +11,9 @@ Included is a live demo hosted on Github Pages for reference:
 ## Repo structure
 - `src` directory contains all of the uncompiled files (Sass, JavaScript, and HTML templates)
 - `src/_includes` contains HTML partials that are used to build the header and footer. I've broken them up into smaller pieces/sub-components to help with readability since they are pretty complicated components. This includes an `icons` folder of SVGs that are included/inlined in the HTML.
-- `src/js` Additional JavaScript `toggle` component that is currently used for menu toggles (header) where the stock Rivet dropdown isn't appropriate (eg. dropdown within a dropdown).
+- `src/js` Additional JavaScript components: 
+    - `toggle` component that is currently used for menu toggles (header) where the stock Rivet dropdown isn't appropriate (eg. dropdown within a dropdown).
+    - `sidenav` component
 - `src/_data` - a JSON file that is used to generate the navigation structure for these mockups.
 - `src/sass` - Sass source files for these new components that make use of [Rivet Sass variables](https://rivet.iu.edu/getting-started/sass/).
 
