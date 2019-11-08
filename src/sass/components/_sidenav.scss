@@ -86,9 +86,9 @@ $shade-selector: '.#{$item} > .#{$list}';
 
 // Set up level indent/background shade map
 $level-styles: (
-  40: $color-black--50,
-  80: $color-black--100,
-  120: $color-black--200
+  20: $color-black--50,
+  40: $color-black--100,
+  60: $color-black--200
 );
 
 // stylelint-disable
