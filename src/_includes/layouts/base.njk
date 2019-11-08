@@ -46,10 +46,13 @@
   <script src="https://assets.uits.iu.edu/javascript/rivet/latest/rivet.min.js"></script>
   <script src="./js/rivet-next-components.js"></script>
   <script>
+    // Initialize Additional Javascript components
     RivetNext.toggle.init();
     RivetNext.sidenav.init();
     
+    // Testing toggle show/hide custom events
     document.addEventListener('rvt:toggleHide', function(event) {
+      // Change to true to test event canceling
       var preventEvent = false;
       if (!preventEvent) {
         console.log(event.detail.elementId)
