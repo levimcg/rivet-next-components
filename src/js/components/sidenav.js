@@ -356,12 +356,12 @@ function init(context) {
     context = document;
   }
 
-  menuToggles.forEach(function (menuToggle) {
+  Array.prototype.slice.call(menuToggles).forEach(function (menuToggle) {
     menuToggle.setAttribute('aria-expanded', 'false');
     menuToggle.setAttribute('aria-haspopup', 'true');
   });
 
-  childMenus.forEach(function (childMenu) {
+  Array.prototype.slice.call(childMenus).forEach(function(childMenu) {
     childMenu.setAttribute('aria-hidden', 'true');
   });
 
