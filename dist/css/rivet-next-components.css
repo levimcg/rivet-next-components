@@ -1013,7 +1013,7 @@
   */
 /* Set up initial selectors for indenting and shading */
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 2.5rem;
+  text-indent: 1.25rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
@@ -1025,7 +1025,7 @@
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 5rem;
+  text-indent: 2.5rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
@@ -1037,7 +1037,7 @@
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 7.5rem;
+  text-indent: 3.75rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
