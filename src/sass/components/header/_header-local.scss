@@ -72,11 +72,13 @@
     &__inner {
       align-items: center;
       display: flex;
+      flex-wrap: wrap;
     }
 
     &__title {
       font-size: $ts-23;
       padding-right: $md;
+      margin-bottom: $xs;
     }
   }
 }
