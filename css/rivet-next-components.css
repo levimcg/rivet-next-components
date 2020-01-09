@@ -267,10 +267,12 @@
   .rvt-header-local__inner {
     align-items: center;
     display: flex;
+    flex-wrap: wrap;
   }
   .rvt-header-local__title {
     font-size: 1.4375rem;
     padding-right: 1.5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -483,6 +485,9 @@
      * normal main nav dropdown menus. Need to refactor this
      * so that it can be used here and for all other child menus.
      */
+  }
+  .rvt-nav-menu__list {
+    flex-wrap: wrap;
   }
   .rvt-nav-menu > .rvt-nav-menu__list {
     display: flex;
