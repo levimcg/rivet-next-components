@@ -136,13 +136,10 @@
     margin-bottom: 0;
     margin-left: auto;
 
-    &__list {
-      flex-wrap: wrap;
-    }
-
     & > &__list {
       display: flex;
       flex-direction: row;
+      flex-wrap: wrap;
     }
 
     &__item {
