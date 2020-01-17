@@ -1,3 +1,9 @@
+---
+permalink: deeply-nested-nav.html
+title: Deeply nested sidebar
+description: Demo of the navigation on an example department page
+sectionPage: true
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +21,7 @@
     {% include "components/header/local-header.njk" %}
     {% endif %}
   </header>
-  <main id="main-content">
+  <main id="main-content" class="rvt-p-bottom-xxl">
     <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-top-xxl">
       <div class="rvt-grid">
         <div class="rvt-grid__item-8-md-up rvt-grid__item-push-4-md rvt-m-bottom-xxl">
@@ -31,13 +37,23 @@
               <a href="./deeply-nested-nav.html">Deeply nested navigation example</a>
             </li>
           </ul>
+          <div class="rvt-m-top-xl">
+            <span class="rvt-badge rvt-badge--success">NOTE</span> 
+            <h2 class="rvt-ts-md rvt-text-bold">About conditionally showing or hiding</h2>
+            <p>Use of bold in the sidenav on this page is for demo purposes only.</p>
+            <p>The sidenav demo on this page shows a hypothetical deeply nested page where the partent and grandparent menus are toggled open.</p>
+            <p>The parent and any ancestor nested navs/lists should be expanded/open so that it's easier for a user to orient themselves when they land on a deeply-nested page.</p>
+            
+            <h3 class="rvt-text-bold">Using server-rendered HTML attributes</h3>
+            <p>To make menus on visible on page load, set the <code>aria-expanded="true"</code> attribute on the menu toggle/button and the <code>aria-hidden="false"</code> attribute on the menu/list in your server-rendered markup.</p>
+          </div>
         </div>
         <div class="rvt-grid__item-3-md-up rvt-grid__item-pull-8-md">
           <h2 class="rvt-hide-md-up rvt-m-bottom-lg">
             <span class="rvt-display-block rvt-text-uppercase rvt-ts-12">More in</span>
             <span class="rvt-display-block rvt-ts-16 rvt-text-bold">Local property title</span>
           </h2>
-          {% include "components/sidenav.njk" %}
+          {% include "components/sidenav-static.njk" %}
         </div>
       </div>
     </div>

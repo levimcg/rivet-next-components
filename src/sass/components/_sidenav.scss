@@ -24,6 +24,9 @@
     padding: $sm*.8125;
     text-decoration: none;
     font-size: $ts-14;
+    width: 80%;
+    flex-basis: 80%;
+    line-height: 1.3;
 
     &[aria-current] {
       box-shadow: inset $xxs 0 0 $color-blue;
@@ -41,7 +44,11 @@
     background: transparent;
     border: none;
     justify-content: center;
-    padding: $sm*.8125;
+    // padding: $sm*.75 0;
+    flex-shrink: 0;
+    height: 2.8125rem; // Explicit height make toggle the same height as link
+    width: 20%;
+    flex-basis: 20%;
 
     svg {
       vertical-align: middle;
