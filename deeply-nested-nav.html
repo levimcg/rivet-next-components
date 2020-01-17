@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Local property example</title>
+  <title>Deeply nested sidebar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/latest/rivet.min.css">
   <link rel="stylesheet" href="./css/rivet-next-components.css">
@@ -519,7 +519,7 @@
   <div class="rvt-container rvt-container--center rvt-container--junior">
     <div class="rvt-header-local__inner">
       <span class="rvt-header-local__title rvt-width-lg-lg-up">
-        <a href="#">Local property example</a>
+        <a href="#">Deeply nested sidebar</a>
       </span>
       <button
         class="rvt-header-local__menu-toggle rvt-hide-lg-up"
@@ -604,7 +604,7 @@
 </div>
     
   </header>
-  <main id="main-content">
+  <main id="main-content" class="rvt-p-bottom-xxl">
     <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-top-xxl">
       <div class="rvt-grid">
         <div class="rvt-grid__item-8-md-up rvt-grid__item-push-4-md rvt-m-bottom-xxl">
@@ -620,31 +620,43 @@
               <a href="./deeply-nested-nav.html">Deeply nested navigation example</a>
             </li>
           </ul>
+          <div class="rvt-m-top-xl">
+            <span class="rvt-badge rvt-badge--success">NOTE</span> 
+            <h2 class="rvt-ts-md rvt-text-bold">About conditionally showing or hiding</h2>
+            <p>Use of bold in the sidenav on this page is for demo purposes only.</p>
+            <p>The sidenav demo on this page shows a hypothetical deeply nested page where the partent and grandparent menus are toggled open.</p>
+            <p>The parent and any ancestor nested navs/lists should be expanded/open so that it's easier for a user to orient themselves when they land on a deeply-nested page.</p>
+            
+            <h3 class="rvt-text-bold">Using server-rendered HTML attributes</h3>
+            <p>To make menus on visible on page load, set the <code>aria-expanded="true"</code> attribute on the menu toggle/button and the <code>aria-hidden="false"</code> attribute on the menu/list in your server-rendered markup.</p>
+          </div>
         </div>
         <div class="rvt-grid__item-3-md-up rvt-grid__item-pull-8-md">
           <h2 class="rvt-hide-md-up rvt-m-bottom-lg">
             <span class="rvt-display-block rvt-text-uppercase rvt-ts-12">More in</span>
             <span class="rvt-display-block rvt-ts-16 rvt-text-bold">Local property title</span>
           </h2>
-          <nav class="rvt-sidenav" aria-label="Sidebar navigation" data-sidenav>
-  <ul class="rvt-sidenav__list" data-sidenav-list>
+          <nav class="rvt-sidenav" aria-label="Sidebar navigation" data-sidenav="">
+  <ul class="rvt-sidenav__list" data-sidenav-list="">
     <li class="rvt-sidenav__item">
       <a href="#" class="rvt-sidenav__link">Section nav one</a>
     </li>
     <li class="rvt-sidenav__item">
-      <a href="#" class="rvt-sidenav__link" aria-current="page">Section nav two that has a really long title</a>
-      <button href="#" class="rvt-sidenav__icon" data-sidenav-toggle="toggle-1">
+      <a href="#" class="rvt-sidenav__link">
+        <span class="rvt-text-bold">Expanded grandparent</span>
+      </a>
+      <button href="#" class="rvt-sidenav__icon" data-sidenav-toggle="toggle-1" aria-expanded="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+          <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+        </svg>
       </button>
-      <ul class="rvt-sidenav__list" id="toggle-1" role="menu">
+      <ul class="rvt-sidenav__list" id="toggle-1" role="menu" aria-hidden="false">
         <li class="rvt-sidenav__item">
           <a href="#" class="rvt-sidenav__link">Level two</a>
           <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
           <ul class="rvt-sidenav__list" id="toggle-2" role="menu">
             <li class="rvt-sidenav__item">
@@ -654,18 +666,20 @@
         </li>
         <li class="rvt-sidenav__item">
           <a href="#" class="rvt-sidenav__link">
-            <span>Level two</span>
+            <span class="rvt-text-bold">Expanded parent</span>
           </a>
-          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-3">
+          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-3" aria-expanded="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
-          <ul class="rvt-sidenav__list" id="toggle-3" role="menu">
+          <ul class="rvt-sidenav__list" id="toggle-3" role="menu" aria-hidden="false">
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">Level three</a>
-            <li class="rvt-sidenav__item">
-              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li><li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link" aria-current="page">
+                <span class="rvt-text-bold">Current nested page</span>
+              </a>
             </li>
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">Level three</a>
@@ -684,18 +698,18 @@
           </a>
           <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
-          <ul class="rvt-sidenav__list" id="toggle-4" role="menu">
+          <ul class="rvt-sidenav__list" id="toggle-4" role="menu" aria-hidden="true">
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">
                 <span>Level three</span>
               </a>
               <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+                  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+                </svg>
               </button>
               <ul class="rvt-sidenav__list" id="toggle-5" role="menu">
                 <li class="rvt-sidenav__item">
@@ -726,7 +740,7 @@
         </div>
       </div>
     </div>
-    <div class="rvt-p-tb-xxl"></div>
+    
   </main>
   <footer>
     <div class="rvt-footer-module-1">

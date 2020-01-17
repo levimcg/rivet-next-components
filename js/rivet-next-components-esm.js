@@ -424,11 +424,19 @@ function init$1(context) {
   }
 
   Array.prototype.slice.call(menuToggles).forEach(function (menuToggle) {
+    if (menuToggle.getAttribute('aria-expanded') == 'true') {
+      menuToggle.setAttribute('aria-haspopup', 'true');
+      return;
+    }
+
     menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-haspopup', 'true');
   });
   Array.prototype.slice.call(childMenus).forEach(function (childMenu) {
-    childMenu.setAttribute('aria-hidden', 'true');
+    if (childMenu.getAttribute('aria-hidden') == 'false') {
+      return;
+    } else {
+      childMenu.setAttribute('aria-hidden', 'true');
+    }
   }); // Destroy any currently initialized dropdowns
 
   destroy$1(context);
