@@ -105,7 +105,7 @@ $level-styles: (
 
   // Indent the link text
   #{$indent-selector} > .rvt-sidenav__link {
-    text-indent: ($indent/16) + rem; // Convert pixel value to rems
+    padding-left: ($indent/16) + rem; // Convert pixel value to rems
   }
 
   // Set border-top color per nested level
