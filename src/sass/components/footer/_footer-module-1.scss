@@ -76,17 +76,18 @@
 
     &__info {
       position: relative;
+      width: 70%;
     }
 
     &__info,
     &__contact {
       left: auto;
-      width: auto;
       padding-left: 0;
     }
 
     &__contact {
       padding-left: $md;
+      width: 30%;
     }
 
     &__inline-field {
