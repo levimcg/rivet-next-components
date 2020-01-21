@@ -824,14 +824,15 @@
   }
   .rvt-footer-module-1__info {
     position: relative;
+    width: 70%;
   }
   .rvt-footer-module-1__info, .rvt-footer-module-1__contact {
     left: auto;
-    width: auto;
     padding-left: 0;
   }
   .rvt-footer-module-1__contact {
     padding-left: 1.5rem;
+    width: 30%;
   }
   .rvt-footer-module-1__inline-field {
     display: inline-block;
@@ -1027,7 +1028,7 @@
   */
 /* Set up initial selectors for indenting and shading */
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 1.25rem;
+  padding-left: 1.25rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
@@ -1039,7 +1040,7 @@
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
@@ -1051,7 +1052,7 @@
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__link {
-  text-indent: 3.75rem;
+  padding-left: 3.75rem;
 }
 
 .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item {
