@@ -136,6 +136,11 @@
     margin-bottom: 0;
     margin-left: auto;
 
+    &--left-aligned {
+      margin-left: 0;
+      padding: $sm 0;
+    }
+
     & > &__list {
       display: flex;
       flex-direction: row;
@@ -151,7 +156,19 @@
     }
 
     &__item--current {
-      box-shadow: 0 $xxs 0 0 $color-blue;
+      box-shadow: none;
+      position: relative;
+    }
+
+    &__item--current::after {
+      background-color: $color-blue;
+      bottom: -$sm;
+      content: "";
+      display: block;
+      height: $xxs;
+      left: 0;
+      position: absolute;
+      width: 100%;
     }
 
     & > &__list > &__item:not(:first-child) {
