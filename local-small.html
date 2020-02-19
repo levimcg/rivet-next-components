@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Rivet Prototype Components</title>
+  <title>Small local nav</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://assets.uits.iu.edu/css/rivet/latest/rivet.min.css">
   <link rel="stylesheet" href="./css/rivet-next-components.css">
@@ -45,145 +45,227 @@
         This shows the alternate version of the nav where the top-level
         navigation is behind a dropdown menu. E.g. on department, center,
         campus pages, etc.
-      --><nav class="rvt-nav-menu" aria-label="Main menu" id="global-nav">
+      -->
+<nav class="rvt-nav-menu rvt-hide-lg-up" aria-label="Main menu" id="global-nav">
   <ul class="rvt-nav-menu__list">
     
-      <li class="rvt-nav-menu__item">
-        <a href="./local-property.html" class="rvt-nav-menu__link">Expertise</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-1"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      
+        <li class="rvt-nav-menu__item">
+          <a href="./local-property.html" class="rvt-nav-menu__link">Expertise</a>
+          
+          <button
+            class="rvt-nav-menu__toggle"
+            data-dropdown-toggle="global-toggle-1"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg></button>
-        <ul
-          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
-          id="global-toggle-1"
-          aria-hidden="true"
-        ><li class="rvt-nav-menu__item">
-            <a href="./local-property.html" class="rvt-nav-menu__link">Alzheimer&#39;s Disease</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Indiana Health</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Precision Health Initiative</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Musculoskeletal Health</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Traumatic Brain Injury</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Global Health</a>
-          </li></ul>
+</svg>
+          </button>
+          <ul
+            class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
+            id="global-toggle-1"
+            aria-hidden="true"
+          >
+            
+            <li class="rvt-nav-menu__item">
+              <a href="./local-property.html" class="rvt-nav-menu__link">Alzheimer&#39;s Disease</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Indiana Health</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Precision Health Initiative</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Musculoskeletal Health</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Traumatic Brain Injury</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Global Health</a>
+            </li>
+            
+          </ul>
+          
         </li>
       
-      <li class="rvt-nav-menu__item rvt-nav-menu__item--current">
-        <a href="#" class="rvt-nav-menu__link"aria-current="page">Education</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-2"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    
+      
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">Education</a>
+          
+          <button
+            class="rvt-nav-menu__toggle"
+            data-dropdown-toggle="global-toggle-2"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg></button>
-        <ul
-          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
-          id="global-toggle-2"
-          aria-hidden="true"
-        ><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">MD Program</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Graduate Medical Education</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Graduate Degrees</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Health Professions Programs</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Continuing Medical Education</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Medical Library</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Mental Health Services</a>
-          </li></ul>
+</svg>
+          </button>
+          <ul
+            class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
+            id="global-toggle-2"
+            aria-hidden="true"
+          >
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">MD Program</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Graduate Medical Education</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Graduate Degrees</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Health Professions Programs</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Continuing Medical Education</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Medical Library</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Mental Health Services</a>
+            </li>
+            
+          </ul>
+          
         </li>
       
-      <li class="rvt-nav-menu__item">
-        <a href="#" class="rvt-nav-menu__link">Research</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-3"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    
+      
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">Research</a>
+          
+          <button
+            class="rvt-nav-menu__toggle"
+            data-dropdown-toggle="global-toggle-3"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg></button>
-        <ul
-          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
-          id="global-toggle-3"
-          aria-hidden="true"
-        ><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Centers and Institutes</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Department Programs</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Clinical Research</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Faculty Labs</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Training Programs</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Investigator Support</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Service Cores</a>
-          </li></ul>
+</svg>
+          </button>
+          <ul
+            class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
+            id="global-toggle-3"
+            aria-hidden="true"
+          >
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Centers and Institutes</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Department Programs</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Clinical Research</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Faculty Labs</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Training Programs</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Investigator Support</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Service Cores</a>
+            </li>
+            
+          </ul>
+          
         </li>
       
-      <li class="rvt-nav-menu__item">
-        <a href="#" class="rvt-nav-menu__link">Campuses</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-4"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+    
+      
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">Campuses</a>
+          
+          <button
+            class="rvt-nav-menu__toggle"
+            data-dropdown-toggle="global-toggle-4"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg></button>
-        <ul
-          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
-          id="global-toggle-4"
-          aria-hidden="true"
-        ><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Bloomington</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Evansville</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Fort Wayne</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Indianapolis</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Muncie</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Northwest – Gary</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">South Bend</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Terre Haute</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">West Lafayette</a>
-          </li></ul>
+</svg>
+          </button>
+          <ul
+            class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
+            id="global-toggle-4"
+            aria-hidden="true"
+          >
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Bloomington</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Evansville</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Fort Wayne</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Indianapolis</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Muncie</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Northwest – Gary</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">South Bend</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Terre Haute</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">West Lafayette</a>
+            </li>
+            
+          </ul>
+          
         </li>
+      
+    
       <li class="rvt-nav-menu__item">
         <a href="#" class="rvt-nav-menu__link">Departments</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-5"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+        <button class="rvt-nav-menu__toggle" data-dropdown-toggle="global-toggle-5" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
 </svg></button>
-        
         <ul
           class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-menu-mega  rvt-nav-menu__list--child-right"
           id="global-toggle-5"
@@ -268,60 +350,144 @@
           </li></ul>
         </li>
       
-      <li class="rvt-nav-menu__item">
-        <a href="#" class="rvt-nav-menu__link">News</a>
-        <button
-          class="rvt-nav-menu__toggle"
-          data-dropdown-toggle="global-toggle-6"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      
+    
+      
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">News</a>
+          
+          <button
+            class="rvt-nav-menu__toggle"
+            data-dropdown-toggle="global-toggle-6"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg></button>
-        <ul
-          class="rvt-nav-menu__list rvt-nav-menu__list--child-menu  rvt-nav-menu__list--child-right"
-          id="global-toggle-6"
-          aria-hidden="true"
-        ><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">News Releases</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Communications</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Blogs</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Events</a>
-          </li></ul>
+</svg>
+          </button>
+          <ul
+            class="rvt-nav-menu__list rvt-nav-menu__list--child-menu  rvt-nav-menu__list--child-right"
+            id="global-toggle-6"
+            aria-hidden="true"
+          >
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">News Releases</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Communications</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Blogs</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Events</a>
+            </li>
+            
+          </ul>
+          
         </li>
-      <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
-        
-        <button
-          class="rvt-header-global__more-toggle"
-          data-dropdown-toggle="more-menu"
-          aria-expanded="false"
-          aria-haspopup="true"
-        ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+      
+    
+      
+        <li class="rvt-nav-menu__item rvt-nav-menu__item--more">
+          <button href="#" class="rvt-header-global__more-toggle" data-dropdown-toggle="global-toggle-7">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
   <g fill="currentColor">
     <circle cx="8" cy="8" r="2"/>
     <circle cx="14" cy="8" r="2"/>
     <circle cx="2" cy="8" r="2"/>
   </g>
-</svg><span class="rvt-m-left-xs">More</span>
-        </button>
+</svg>
+            <span class="rvt-m-left-xs">More</span>
+          </button>
+          <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" id="global-toggle-7">
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">About</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Careers</a>
+            </li>
+            
+            <li class="rvt-nav-menu__item">
+              <a href="#" class="rvt-nav-menu__link">Give</a>
+            </li>
+            
+          </ul>
+        </li>
         
-        <ul class="rvt-nav-menu__list rvt-nav-menu__list--child-menu rvt-nav-menu__list--child-right" id="more-menu" aria-hidden="true"><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">About</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Careers</a>
-          </li><li class="rvt-nav-menu__item">
-            <a href="#" class="rvt-nav-menu__link">Give</a>
-          </li></ul>
-      </li><li class="rvt-nav-menu__item rvt-hide-lg-up">
-        <a href="#" class="rvt-nav-menu__link">About</a>
-      </li><li class="rvt-nav-menu__item rvt-hide-lg-up">
-        <a href="#" class="rvt-nav-menu__link">Careers</a>
-      </li><li class="rvt-nav-menu__item rvt-hide-lg-up">
-        <a href="#" class="rvt-nav-menu__link">Give</a>
-      </li></ul>
+        <li class="rvt-nav-menu__item rvt-hide-lg-up">
+          <a href="#" class="rvt-nav-menu__link">About</a>
+        </li>
+        
+        <li class="rvt-nav-menu__item rvt-hide-lg-up">
+          <a href="#" class="rvt-nav-menu__link">Careers</a>
+        </li>
+        
+        <li class="rvt-nav-menu__item rvt-hide-lg-up">
+          <a href="#" class="rvt-nav-menu__link">Give</a>
+        </li>
+        
+        
+      
+    
+  </ul>
+</nav>
+
+
+<nav class="rvt-nav-menu rvt-hide-lg-down">
+  <button class="rvt-nav-menu__secondary-toggle" data-dropdown-toggle="secondary-menu" aria-expanded="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g fill="currentColor">
+    <path d="M15,3H1A1,1,0,0,1,1,1H15a1,1,0,0,1,0,2Z"/>
+    <path d="M15,9H1A1,1,0,0,1,1,7H15a1,1,0,0,1,0,2Z"/>
+    <path d="M15,15H1a1,1,0,0,1,0-2H15a1,1,0,0,1,0,2Z"/>
+  </g>
+</svg>
+    <span class="rvt-m-left-xs">Global navigation</span>
+  </button>
+  <ul class="rvt-nav-menu__secondary-menu" id="secondary-menu" aria-hidden="true">
+  
+    
+      <li class="rvt-nav-menu__item"><a href="./local-property.html">Expertise</a></li>
+    
+  
+    
+      <li class="rvt-nav-menu__item"><a href="#">Education</a></li>
+    
+  
+    
+      <li class="rvt-nav-menu__item"><a href="#">Research</a></li>
+    
+  
+    
+      <li class="rvt-nav-menu__item"><a href="#">Campuses</a></li>
+    
+  
+    
+      <li class="rvt-nav-menu__item"><a href="#">Departments</a></li>
+    
+  
+    
+      <li class="rvt-nav-menu__item"><a href="#">News</a></li>
+    
+  
+    
+      
+      <li class="rvt-nav-menu__item"><a href="#">About</a></li>
+      
+      <li class="rvt-nav-menu__item"><a href="#">Careers</a></li>
+      
+      <li class="rvt-nav-menu__item"><a href="#">Give</a></li>
+      
+    
+  
+  </ul>
 </nav><!-- Start search toggle and pop-up -->
       <button
         class="rvt-header-global__search-toggle"
@@ -349,48 +515,163 @@
   </div> <!-- main rvt-container -->
 </div> <!-- end global header -->
     
+    <div class="rvt-header-local">
+  <div class="rvt-container rvt-container--center rvt-container--junior">
+    <div class="rvt-header-local__inner">
+      <span class="rvt-header-local__title">
+        <a href="#">Center for Computational Biology and Bioinformatics</a>
+      </span>
+      <button
+        class="rvt-header-local__menu-toggle rvt-hide-lg-up"
+        data-toggle="local-nav"
+        aria-expanded="false"
+        aria-haspopup="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+</svg>
+        <span class="rvt-sr-only">Toggle Menu</span>
+      </button>
+      <nav class="rvt-nav-menu rvt-nav-menu--left-aligned" aria-label="Section menu" id="local-nav">
+  
+  <ul class="rvt-nav-menu__list">
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Education Programs</a>
+      
+      <button
+        class="rvt-nav-menu__toggle"
+        data-dropdown-toggle="local-toggle-1"
+        aria-expanded="false"
+        aria-haspopup="true"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
+</svg>
+      </button>
+      <ul
+        class="rvt-nav-menu__list rvt-nav-menu__list--child-menu "
+        id="local-toggle-1"
+        aria-hidden="true"
+      >
+        
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">MD</a>
+        </li>
+        
+        <li class="rvt-nav-menu__item">
+          <a href="#" class="rvt-nav-menu__link">Graduate Degrees</a>
+        </li>
+        
+      </ul>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Research</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item rvt-nav-menu__item--current">
+      <a href="#" class="rvt-nav-menu__link" aria-current="page">Clinical Care</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Careers</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Faculty</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">News and Events</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Contacts</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">MD Admissions</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Curriculum</a>
+      
+    </li>
+    
+    <li class="rvt-nav-menu__item">
+      <a href="#" class="rvt-nav-menu__link">Residency Placement</a>
+      
+    </li>
+    
+  </ul>
+</nav>
+    </div>
+  </div>
+</div>
+    
   </header>
-  <main id="main-content">
+  <main id="main-content" class="rvt-p-bottom-xxl">
     <div class="rvt-container rvt-container--center rvt-container--junior rvt-m-top-xxl">
       <div class="rvt-grid">
         <div class="rvt-grid__item-8-md-up rvt-grid__item-push-4-md rvt-m-bottom-xxl">
           <h1 class="rvt-text-bold rvt-ts-32 rvt-lh-title">Contents</h1>
           <ul>
             <li>
-              <a href="./" class="rvt-text-bold">Top-level global navigation example</a>
+              <a href="./">Top-level global navigation example</a>
             </li>
             <li>
-              <a href="./local-property.html"><span class="rvt-text-bold">Local property navigation example</span> (long title and lots of nav items)</a>
+              <a href="./local-property.html">Local property navigation example</a>
             </li>
             <li>
-              <a href="./deeply-nested-nav.html" class="rvt-text-bold">Deeply nested navigation example</a>
+              <a href="./deeply-nested-nav.html">Deeply nested navigation example</a>
             </li>
           </ul>
+          <div class="rvt-m-top-xl">
+            <span class="rvt-badge rvt-badge--success">NOTE</span> 
+            <h2 class="rvt-ts-md rvt-text-bold">About conditionally showing or hiding</h2>
+            <p>Use of bold in the sidenav on this page is for demo purposes only.</p>
+            <p>The sidenav demo on this page shows a hypothetical deeply nested page where the partent and grandparent menus are toggled open.</p>
+            <p>The parent and any ancestor nested navs/lists should be expanded/open so that it's easier for a user to orient themselves when they land on a deeply-nested page.</p>
+            
+            <h3 class="rvt-text-bold">Using server-rendered HTML attributes</h3>
+            <p>To make menus on visible on page load, set the <code>aria-expanded="true"</code> attribute on the menu toggle/button and the <code>aria-hidden="false"</code> attribute on the menu/list in your server-rendered markup.</p>
+          </div>
         </div>
         <div class="rvt-grid__item-3-md-up rvt-grid__item-pull-8-md">
           <h2 class="rvt-hide-md-up rvt-m-bottom-lg">
             <span class="rvt-display-block rvt-text-uppercase rvt-ts-12">More in</span>
             <span class="rvt-display-block rvt-ts-16 rvt-text-bold">Local property title</span>
           </h2>
-          <nav class="rvt-sidenav" aria-label="Sidebar navigation" data-sidenav>
-  <ul class="rvt-sidenav__list" data-sidenav-list>
+          <nav class="rvt-sidenav" aria-label="Sidebar navigation" data-sidenav="">
+  <ul class="rvt-sidenav__list" data-sidenav-list="">
     <li class="rvt-sidenav__item">
       <a href="#" class="rvt-sidenav__link">Section nav one</a>
     </li>
     <li class="rvt-sidenav__item">
-      <a href="#" class="rvt-sidenav__link" aria-current="page">Section nav two that has a really long title</a>
-      <button href="#" class="rvt-sidenav__icon" data-sidenav-toggle="toggle-1">
+      <a href="#" class="rvt-sidenav__link">
+        <span class="rvt-text-bold">Expanded grandparent has a really long title</span>
+      </a>
+      <button href="#" class="rvt-sidenav__icon" data-sidenav-toggle="toggle-1" aria-expanded="true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+          <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+        </svg>
       </button>
-      <ul class="rvt-sidenav__list" id="toggle-1" role="menu">
+      <ul class="rvt-sidenav__list" id="toggle-1" role="menu" aria-hidden="false">
         <li class="rvt-sidenav__item">
           <a href="#" class="rvt-sidenav__link">Level two</a>
           <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-2">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
           <ul class="rvt-sidenav__list" id="toggle-2" role="menu">
             <li class="rvt-sidenav__item">
@@ -400,18 +681,20 @@
         </li>
         <li class="rvt-sidenav__item">
           <a href="#" class="rvt-sidenav__link">
-            <span>Level two</span>
+            <span class="rvt-text-bold">Expanded parent</span>
           </a>
-          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-3">
+          <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-3" aria-expanded="true">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
-          <ul class="rvt-sidenav__list" id="toggle-3" role="menu">
+          <ul class="rvt-sidenav__list" id="toggle-3" role="menu" aria-hidden="false">
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">Level three</a>
-            <li class="rvt-sidenav__item">
-              <a href="#" class="rvt-sidenav__link">Level three</a>
+            </li><li class="rvt-sidenav__item">
+              <a href="#" class="rvt-sidenav__link" aria-current="page">
+                <span class="rvt-text-bold">Current nested page</span>
+              </a>
             </li>
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">Level three</a>
@@ -430,22 +713,22 @@
           </a>
           <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+              <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+            </svg>
           </button>
-          <ul class="rvt-sidenav__list" id="toggle-4" role="menu">
+          <ul class="rvt-sidenav__list" id="toggle-4" role="menu" aria-hidden="true">
             <li class="rvt-sidenav__item">
               <a href="#" class="rvt-sidenav__link">
                 <span>Level three</span>
               </a>
               <button class="rvt-sidenav__icon" data-sidenav-toggle="toggle-5">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"/>
-</svg>
+                  <path fill="currentColor" d="M8,12.46a2,2,0,0,1-1.52-.7L1.24,5.65a1,1,0,1,1,1.52-1.3L8,10.46l5.24-6.11a1,1,0,0,1,1.52,1.3L9.52,11.76A2,2,0,0,1,8,12.46Z"></path>
+                </svg>
               </button>
               <ul class="rvt-sidenav__list" id="toggle-5" role="menu">
                 <li class="rvt-sidenav__item">
-                  <a href="#" class="rvt-sidenav__link">Level four</a>
+                  <a href="#" class="rvt-sidenav__link">Level four has a really long title</a>
                 </li>
                 <li class="rvt-sidenav__item">
                   <a href="#" class="rvt-sidenav__link">
@@ -472,7 +755,7 @@
         </div>
       </div>
     </div>
-    <div class="rvt-p-tb-xxl"></div>
+    
   </main>
   <footer>
     <div class="rvt-footer-module-1">

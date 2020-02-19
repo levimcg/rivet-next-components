@@ -159,8 +159,7 @@
 @media screen and (min-width: 67.5em) {
   .rvt-header-global {
     border-bottom: none;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1rem;
   }
   .rvt-header-global__inner {
     display: flex;
@@ -262,17 +261,15 @@
 
 @media screen and (min-width: 67.5em) {
   .rvt-header-local {
-    padding-top: 0.5rem;
-  }
-  .rvt-header-local__inner {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.06);
+    border-bottom: none;
+    border-top: 1px solid #eaeaea;
   }
   .rvt-header-local__title {
-    font-size: 1.4375rem;
-    padding-right: 1.5rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+    padding-right: 2rem;
   }
 }
 
@@ -486,6 +483,10 @@
      * so that it can be used here and for all other child menus.
      */
   }
+  .rvt-nav-menu--left-aligned {
+    margin-left: 0;
+    padding: 1rem 0;
+  }
   .rvt-nav-menu > .rvt-nav-menu__list {
     display: flex;
     flex-direction: row;
@@ -499,7 +500,18 @@
     margin-left: 0;
   }
   .rvt-nav-menu__item--current {
-    box-shadow: 0 0.25rem 0 0 #006298;
+    box-shadow: none;
+    position: relative;
+  }
+  .rvt-nav-menu__item--current::after {
+    background-color: #006298;
+    bottom: -1rem;
+    content: "";
+    display: block;
+    height: 0.25rem;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
   .rvt-nav-menu > .rvt-nav-menu__list > .rvt-nav-menu__item:not(:first-child) {
     margin-left: 0.825rem;
@@ -946,4 +958,8 @@
 
 .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list > .rvt-sidenav__item > .rvt-sidenav__list {
   background-color: #dddddd;
+}
+
+.rvt-container--junior {
+  max-width: 1240px;
 }
