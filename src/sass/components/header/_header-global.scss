@@ -150,8 +150,7 @@
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-global {
     border-bottom: none;
-    padding-top: $md;
-    padding-bottom: $md;
+    padding-top: $sm;
 
     &__inner {
       display: flex;

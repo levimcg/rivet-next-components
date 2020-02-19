@@ -67,18 +67,15 @@
 
 @media screen and (min-width: $breakpoint-lg) {
   .#{$prefix}-header-local {
-    padding-top: $xs;
-
-    &__inner {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-    }
+    padding-top: $sm;
+    padding-bottom: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .06);
+    border-bottom: none;
+    border-top: 1px solid $color-black--150;
 
     &__title {
-      font-size: $ts-23;
-      padding-right: $md;
-      margin-bottom: $xs;
+      font-size: $ts-20;
+      padding-right: $lg;
     }
   }
 }
