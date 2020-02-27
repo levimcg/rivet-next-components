@@ -270,6 +270,7 @@
   .rvt-header-local__title {
     font-size: 1.25rem;
     padding-right: 2rem;
+    padding-bottom: 1rem;
   }
 }
 
@@ -485,7 +486,7 @@
   }
   .rvt-nav-menu--left-aligned {
     margin-left: 0;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
   }
   .rvt-nav-menu > .rvt-nav-menu__list {
     display: flex;
