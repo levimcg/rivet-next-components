@@ -138,7 +138,8 @@
 
     &--left-aligned {
       margin-left: 0;
-      padding: $sm 0;
+      // padding: $sm 0;
+      padding-bottom: $sm;
     }
 
     & > &__list {
