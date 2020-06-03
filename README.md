@@ -1,12 +1,37 @@
 # Rivet Next Components
-Experimental components for the next version of Rivet.
+Experimental components for the next version of Rivet. Included is a live demo hosted on Github Pages for reference:
+
+- [**Top-level navigation (Global header)**](https://levimcg.github.io/rivet-next-components/)
+- [**Second-level/sub navigation (Local header)**](https://levimcg.github.io/rivet-next-components/local-property.html)
 
 ## About
-This repo uses a static site generator called [Eleventy](https://www.11ty.io/) to build the HTML for these components. Compiled CSS and JavaScript is in the `dist` folder.
+This repo uses a static site generator called [Eleventy](https://www.11ty.io/) to build the HTML for these components.
 
-Included is a live demo hosted on Github Pages for reference:
+### Compiled assets
+There are both minified and uncompressed version of the compiled assets in the `dist` folder.
 
-[**View Live Demo**](https://levimcg.github.io/rivet-next-components/)
+### Implementation details
+To use the header you'll need to
+
+1. include a reference to the latest [**Rivet 1.x.x** CSS and JavaScript](https://rivet.iu.edu/components/#hosted-css-and-javascript) in your template.
+1. Download and include a reference to the compiled CSS and JavaScript in the `dist` folder in this repo Eg. `path/to/your-static-assets/rivet-next-components.css`.
+1. Add the markup for the header to your templates, including all appropriate data attribute/id combos. All of the partials/includes used to build the header markup can be [found in this folder](https://github.com/levimcg/rivet-next-components/tree/master/src/_includes/components/header).
+1. Initialize the experimental JavaScript components included in the compiled `dist` folder in this repo.
+
+Once you've included the references to the above compiled CSS and JS and written the markup for the header in your page, you should initialize the components _after_ the included reference to the compiled files somewhere near the closing tag of your main HTML template. You can see an example of this in the `base.njk` [template in this repo](https://github.com/levimcg/rivet-next-components/blob/b3ae045b6129d04996a818c44f93317d2fb23e51/src/_includes/layouts/base.njk#L49).
+
+```html
+<script src="https://assets.uits.iu.edu/javascript/rivet/latest/rivet.min.js"></script>
+<script src="./js/rivet-next-components.js"></script>
+<script>
+    // Initialize Additional Javascript components
+    RivetNext.toggle.init();
+</script>
+```
+
+The main JS bundle in this repo is namespaced with `RivetNext`, so to initialize the experimental `toggle` component, you make a call to `Rivet.toggle.init();` before you can use it.
+
+The `toggle` component is only used on the search toggle right now. The rest of the submenu navigation used the Rivet 1.x.x [Dropdown markup and JavaScript documented here](https://rivet.iu.edu/components/navigation/dropdown/).
 
 ## Repo structure
 - `src` directory contains all of the uncompiled files (Sass, JavaScript, and HTML templates)

@@ -52,18 +52,6 @@
     // Initialize Additional Javascript components
     RivetNext.toggle.init();
     RivetNext.sidenav.init();
-    
-    // Testing toggle show/hide custom events
-    document.addEventListener('rvt:toggleHide', function(event) {
-      // Change to true to test event canceling
-      var preventEvent = false;
-      if (!preventEvent) {
-        console.log(event.detail.elementId)
-      } else {
-        event.preventDefault();
-        console.log('nope, cancelled')
-      }
-    });
   </script>
 </body>
 </html>
